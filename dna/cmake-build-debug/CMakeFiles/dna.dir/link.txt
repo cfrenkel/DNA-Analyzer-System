@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/dna.dir/main.cpp.o CMakeFiles/dna.dir/DNAReader.cpp.o CMakeFiles/dna.dir/DNAWriter.cpp.o CMakeFiles/dna.dir/dna_seq.cpp.o  -o dna 
