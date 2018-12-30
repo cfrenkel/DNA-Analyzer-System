@@ -8,6 +8,7 @@
 #include "Save.h"
 #include "Show.h"
 #include "Exit.h"
+#include "Dup.h"
 
 
 FactoryCommand::FactoryCommand()
@@ -17,6 +18,7 @@ FactoryCommand::FactoryCommand()
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("save", new Save));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("show", new Show));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("exit", new Exit));
+    commandMap.insert(std::pair<std::string,SharePointer<Command> >("dup", new Dup));
 }
 Command* FactoryCommand::getCommand(std::string command)
 {

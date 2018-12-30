@@ -12,12 +12,14 @@ class DnaData
 public:
 //    DnaData();
     void newDna(std::string, std::string);
+    void newDnaByDna(std::string, DnaMetaData);
     void newDna(std::string, DNA);
     int getIdByName(std::string);
     std::string getNameById(int);
     void printNameMap();
     void printIdMap();
     DnaMetaData & getByNumber(int);
+    DnaMetaData & getByName(std::string);
 
 private:
     static int number;

@@ -23,6 +23,17 @@ void DnaData::newDna(std::string name, std::string dna)
 //    printNameMap();
 //    printIdMap();
 }
+
+void DnaData::newDnaByDna(std::string name, DnaMetaData dna)
+{
+    ++number;
+    dna.setId(number);
+    dna.setName(name);
+    dna_id_map.insert(std::pair<int, DnaMetaData>(number, dna));
+    dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, dna));
+//    printNameMap();
+//    printIdMap();
+}
 void DnaData::newDna(std::string name, DNA dna)
 {
     ++number;
@@ -49,7 +60,6 @@ int DnaData::getIdByName(std::string name)
         }
     }
 }
-
 std::string DnaData::getNameById(int number)
 {
     DnaMetaData dd = dna_id_map.at(number);
@@ -62,7 +72,6 @@ std::string DnaData::getNameById(int number)
         }
     }
 }
-
 void DnaData::printIdMap()
 {
 
@@ -74,7 +83,6 @@ void DnaData::printIdMap()
         std::cout << "Id: " << itr->first << " dna: " << itr->second << "\n";
     }
 }
-
 void DnaData::printNameMap()
 {
     std::cout << dna_id_map.size() << " \n";
@@ -87,4 +95,8 @@ void DnaData::printNameMap()
 DnaMetaData & DnaData::getByNumber(int number)
 {
     return dna_id_map.at(number);
+}
+DnaMetaData& DnaData::getByName(std::string name)
+{
+    return dna_string_map.at(name);
 }

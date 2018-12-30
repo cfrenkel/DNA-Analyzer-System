@@ -15,6 +15,9 @@ public:
     DnaMetaData(int, std::string, DNA *);
     bool operator==(const DnaMetaData&);
     DNA & getDna();
+    void setId(int);
+    int getId();
+    void setName(std::string);
     friend std::ostream&operator<<(std::ostream&os, const DnaMetaData & other);
 
 

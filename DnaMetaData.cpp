@@ -24,3 +24,16 @@ std::ostream& operator<<(std::ostream&os, const DnaMetaData & other)
     os << *other.m_dnaPtr;
     return os;
 }
+
+void DnaMetaData::setId(int id)
+{
+    m_id = id;
+}
+int DnaMetaData::getId()
+{
+    return m_id;
+}
+void DnaMetaData::setName(std::string name)
+{
+    m_name = name;
+}
