@@ -7,16 +7,18 @@
 #include "Load.h"
 #include "Save.h"
 #include "Show.h"
+#include "Exit.h"
 
 
 FactoryCommand::FactoryCommand()
 {
-    commandMap.insert(std::pair<std::string,Command*>("new", new New));
-    commandMap.insert(std::pair<std::string,Command*>("load", new Load));
-    commandMap.insert(std::pair<std::string,Command*>("save", new Save));
-    commandMap.insert(std::pair<std::string,Command*>("show", new Show));
+    commandMap.insert(std::pair<std::string,SharePointer<Command> >("new", new New));
+    commandMap.insert(std::pair<std::string,SharePointer<Command> >("load", new Load));
+    commandMap.insert(std::pair<std::string,SharePointer<Command> >("save", new Save));
+    commandMap.insert(std::pair<std::string,SharePointer<Command> >("show", new Show));
+    commandMap.insert(std::pair<std::string,SharePointer<Command> >("exit", new Exit));
 }
 Command* FactoryCommand::getCommand(std::string command)
 {
-    return commandMap.at(command);
+    return commandMap.at(command).get();
 }

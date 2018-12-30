@@ -14,6 +14,7 @@ class DnaMetaData
 public:
     DnaMetaData(int, std::string, DNA *);
     bool operator==(const DnaMetaData&);
+    DNA & getDna();
     friend std::ostream&operator<<(std::ostream&os, const DnaMetaData & other);
 
 

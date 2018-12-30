@@ -11,7 +11,9 @@ void Load::action(std::list<std::string> args, DnaData &data)
     std::string dna = reader.read();
     data.newDna(args.back(), dna);
 
-    std::cout << "[" << data.getIdByName(args.back()) << "] " <<args.back()<<": " << dna <<"\n";
-//    data.printNameMap();
-//    data.printIdMap();
+    std::stringstream ss;
+    ss << "[" << data.getIdByName(args.back()) << "] " <<args.back()<<": " << dna <<"\n";
+    m_message = ss.str();
+    //    data.printNameMap();
+    //    data.printIdMap();
 }

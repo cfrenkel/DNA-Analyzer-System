@@ -6,17 +6,14 @@
 #define DNA_COMMANDINTERFACE_H
 
 #include "UserInterface.h"
-#include "Controller.h"
+#include <iostream>
 
 class CommandInterface /*: public UserInterface*/
 {
-
 public:
-    void run();
-    void exit();
+    std::string input();
+    void output(std::string);
 
-private:
-    Controller ctrl;
 };
 
 

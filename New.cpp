@@ -13,5 +13,7 @@ void New::action(std::list<std::string> arguments, DnaData & data)
     {
         throw mes;
     }
-    std::cout << "[" << data.getIdByName(arguments.back()) << "] " << arguments.back() <<": " << arguments.front() << "\n";
+    std::stringstream ss;
+    ss << "[" << data.getIdByName(arguments.back()) << "] " << arguments.back() <<": " << arguments.front() << "\n";
+    m_message = ss.str();
 }

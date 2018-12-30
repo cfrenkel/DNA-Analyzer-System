@@ -15,7 +15,7 @@ public:
     FactoryCommand();
     Command * getCommand(std::string);
 private:
-    std::map<std::string, Command*> commandMap;
+    std::map<std::string, SharePointer<Command> > commandMap;
 };
 
 

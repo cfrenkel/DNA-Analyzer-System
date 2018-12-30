@@ -5,20 +5,15 @@
 #include "CommandInterface.h"
 #include "iostream"
 
-
-void CommandInterface::run()
+std::string CommandInterface::input()
 {
     std::string command;
-    do
-    {
-        std::cout << "<<< ";
-        std::getline(std::cin, command);
-//        std::cout << command << "\n";
-        if (command != "exit")
-        {
-            ctrl.run(command);
-        }
-    }
-    while (command != "exit");
-    std::cout << "Good By :) \n";
+    output("> cmd >>> ");
+    std::getline(std::cin, command);
+    return command;
+}
+void CommandInterface::output(std::string message)
+{
+    if (message.length() > 0)
+        std::cout << message;
 }

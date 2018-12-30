@@ -11,13 +11,15 @@
 #include "Parser.h"
 #include "DnaData.h"
 #include "FactoryCommand.h"
+#include "CommandInterface.h"
 
 class Controller
 {
 public:
-    void run(std::string);
+    void run();
 
 private:
+    CommandInterface commandInterface;
     std::list<std::string> recentCommand;
     Parser m_parser;
     DnaData m_dnaData;

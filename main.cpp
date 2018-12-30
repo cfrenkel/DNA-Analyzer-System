@@ -1,10 +1,10 @@
 
-#include "CommandInterface.h"
+#include "Controller.h"
 using namespace std;
 
 int main()
 {
-    CommandInterface commandInterface;
-    commandInterface.run();
+    Controller c;
+    c.run();
 }
 

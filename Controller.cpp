@@ -19,29 +19,32 @@ void printParser(std::list<std::string> par)
     std::cout << "\n";
 }
 
-void Controller::run(std::string command)
+void Controller::run()
 {
-    recentCommand.push_front(command);
-    std::list<std::string> par = m_parser.parse(command);
-    Command * c;
-    try {
-        c = factoryCommand.getCommand(par.front());
-    }
-    catch (...)
+    while (true)
     {
-        std::cout << "Command Not Found :( \n";
-        return;
+        std::string command = commandInterface.input();
+        recentCommand.push_front(command);
+        std::list<std::string> par = m_parser.parse(command);
+        Command *c;
+        try {
+            c = factoryCommand.getCommand(par.front());
+        }
+        catch (...) {
+            std::cout << "Command Not Found :( \n";
+            return;
+        }
+        par.pop_front();
+        try {
+            c->action(par, m_dnaData);
+            commandInterface.output(c->m_message);
+        }
+        catch (const char *message) {
+            commandInterface.output(message);
+            return;
+        }
+        //printParser(par);
     }
-    par.pop_front();
-    try {
-        c->action(par, m_dnaData);
-    }
-    catch (const char * message)
-    {
-        std::cout << message << "\n";
-        return;
-    }
-    //printParser(par);
 
 }
 
