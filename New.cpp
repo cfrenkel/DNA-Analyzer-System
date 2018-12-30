@@ -6,14 +6,23 @@
 
 void New::action(std::list<std::string> arguments, DnaData & data)
 {
+    std::string del = arguments.back().substr(0,1);
+    std::string arg = arguments.back().substr(1,arguments.back().length());
     try {
-    data.newDna(arguments.back(), arguments.front());
+        if (del == "#")
+        {
+
+        }
+        else
+        {
+            data.newDna(arg, arguments.front());
+        }
     }
     catch (const char * mes)
     {
         throw mes;
     }
     std::stringstream ss;
-    ss << "[" << data.getIdByName(arguments.back()) << "] " << arguments.back() <<": " << arguments.front() << "\n";
+    ss << "[" << data.getIdByName(arg) << "] " << arg <<": " << arguments.front() << "\n";
     m_message = ss.str();
 }
