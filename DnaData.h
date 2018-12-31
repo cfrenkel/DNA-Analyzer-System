@@ -18,8 +18,12 @@ public:
     std::string getNameById(int);
     void printNameMap();
     void printIdMap();
+
     DnaMetaData & getByNumber(int);
     DnaMetaData & getByName(std::string);
+
+    void changeNameByName(std::string, std::string);
+    void changeNameByNumber(std::string, int);
 
 private:
     static int number;

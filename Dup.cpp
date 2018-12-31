@@ -6,7 +6,6 @@
 
 void Dup::action(std::list<std::string> args, DnaData & data)
 {
-//dup #number name
     std::string s = args.front();
     std::string del = s.substr(0, 1);
     std::string name = args.back().substr(1,args.back().length());

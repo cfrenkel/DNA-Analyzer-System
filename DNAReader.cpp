@@ -1,5 +1,4 @@
 #include "DNAReader.h"
-#include "dna_seq.h"
 //
 // Created by cfrenkel on 10/29/18.
 //

@@ -10,6 +10,7 @@
 
 class Save : public Command
 {
+public:
     void action(std::list<std::string>, DnaData &);
 };
 

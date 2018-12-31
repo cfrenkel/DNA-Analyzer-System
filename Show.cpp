@@ -7,9 +7,18 @@
 void Show::action(std::list<std::string> args, DnaData & data)
 {
     std::string s = args.front();
-    int number = fromString(s.substr(1, s.length()));
+    std::string del = s.substr(0, 1);
+
+    DnaMetaData d;
+    if (del == "#") {
+         d = data.getByNumber(fromString(s.substr(1, s.length())));
+    }
+    else
+    {
+         d = data.getByName(s.substr(1, s.length()));
+    }
     std::stringstream ss;
-    ss << "[" << number << "] " << data.getNameById(number) << ": " << data.getByNumber(number) << " \n";
+    ss << "[" << d.getId() << "] " << d.getName() << ": " << data.getByNumber(d.getId()) << " \n";
     m_message = ss.str();
 }
 

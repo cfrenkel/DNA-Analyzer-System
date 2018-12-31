@@ -33,6 +33,10 @@ int DnaMetaData::getId()
 {
     return m_id;
 }
+std::string DnaMetaData::getName()
+{
+    return m_name;
+}
 void DnaMetaData::setName(std::string name)
 {
     m_name = name;

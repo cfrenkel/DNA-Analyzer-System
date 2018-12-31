@@ -13,7 +13,6 @@ class Parser
 {
 public:
     std::list<std::string> parse(std::string);
-
 };
 
 

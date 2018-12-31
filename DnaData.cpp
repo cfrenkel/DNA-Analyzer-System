@@ -6,7 +6,6 @@
 #include "DnaMetaData.h"
 
 int DnaData::number = 0;
-
 void DnaData::newDna(std::string name, std::string dna)
 {
     try {
@@ -23,7 +22,6 @@ void DnaData::newDna(std::string name, std::string dna)
 //    printNameMap();
 //    printIdMap();
 }
-
 void DnaData::newDnaByDna(std::string name, DnaMetaData dna)
 {
     ++number;
@@ -31,8 +29,6 @@ void DnaData::newDnaByDna(std::string name, DnaMetaData dna)
     dna.setName(name);
     dna_id_map.insert(std::pair<int, DnaMetaData>(number, dna));
     dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, dna));
-//    printNameMap();
-//    printIdMap();
 }
 void DnaData::newDna(std::string name, DNA dna)
 {
@@ -99,4 +95,25 @@ DnaMetaData & DnaData::getByNumber(int number)
 DnaMetaData& DnaData::getByName(std::string name)
 {
     return dna_string_map.at(name);
+}
+void DnaData::changeNameByName(std::string newName, std::string oldName)
+{
+    DnaMetaData dd = getByName(oldName);
+    dd.setName(newName);
+
+    dna_string_map.erase(oldName);
+    dna_string_map.insert(std::pair<std::string,DnaMetaData>(newName, dd));
+    dna_id_map.erase(dd.getId());
+    dna_id_map.insert(std::pair<int,DnaMetaData>(dd.getId(), dd));
+
+}
+void DnaData::changeNameByNumber(std::string newName, int number)
+{
+    DnaMetaData dd = getByNumber(number);
+    dd.setName(newName);
+
+    dna_string_map.erase(dd.getName());
+    dna_string_map.insert(std::pair<std::string,DnaMetaData>(newName, dd));
+    dna_id_map.erase(number);
+    dna_id_map.insert(std::pair<int,DnaMetaData>(number, dd));
 }
