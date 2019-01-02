@@ -6,6 +6,7 @@
 #include "../model/DnaMetaData.h"
 
 int DnaData::number = 0;
+
 void DnaData::newDna(std::string name, std::string dna)
 {
     DNA * d;
@@ -123,4 +124,8 @@ void DnaData::changeNameByNumber(std::string newName, int number)
 int DnaData::getSeqNumber()
 {
     return number + 1;
+}
+int DnaData::getLength(DnaMetaData & d)
+{
+    return d.getDna().getLength();
 }

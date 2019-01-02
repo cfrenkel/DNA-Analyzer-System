@@ -8,12 +8,14 @@
 
 #include <map>
 #include "../controller/Command.h"
+#include "../SharePointer.h"
 
 class FactoryCommand
 {
 public:
     FactoryCommand();
     Command * getCommand(std::string);
+
 private:
     std::map<std::string, SharePointer<Command> > commandMap;
 };

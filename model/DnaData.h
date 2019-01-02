@@ -19,6 +19,7 @@ public:
     void printNameMap();
     void printIdMap();
     int getSeqNumber();
+    int getLength(DnaMetaData &);
 
     DnaMetaData & getByNumber(int);
     DnaMetaData & getByName(std::string);

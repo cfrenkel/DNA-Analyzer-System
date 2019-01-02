@@ -44,7 +44,7 @@ void Dup::action(std::list<std::string> args, DnaData & data)
     }
 
     std::stringstream ss;
-    ss << "[" << data.getIdByName(name) << "] " << name <<": " << data.getIdByName(name) << "\n";
+    ss << "[" << data.getIdByName(name) << "] " << name <<": " << data.getByName(name) << "\n";
     m_message = ss.str();
 }
 
