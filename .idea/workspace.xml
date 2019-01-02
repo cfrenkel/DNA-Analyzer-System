@@ -12,14 +12,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db96c7d8-4d5e-43e8-87f8-f950cd81c2cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DnaData.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DnaData.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DnaMetaData.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DnaMetaData.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DnaMetaData.h" beforeDir="false" afterPath="$PROJECT_DIR$/DnaMetaData.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IDNA.h" beforeDir="false" afterPath="$PROJECT_DIR$/IDNA.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Load.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Load.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/New.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dna_seq.h" beforeDir="false" afterPath="$PROJECT_DIR$/dna_seq.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Command.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Command.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/view/CommandInterface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/view/CommandInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Controller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNAReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/model/DNAReader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNAReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/model/DNAReader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNAWriter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/model/DNAWriter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNAWriter.h" beforeDir="false" afterPath="$PROJECT_DIR$/model/DNAWriter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Del.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Del.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Del.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Del.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DnaData.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/model/DnaData.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DnaData.h" beforeDir="false" afterPath="$PROJECT_DIR$/model/DnaData.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DnaMetaData.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/model/DnaMetaData.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DnaMetaData.h" beforeDir="false" afterPath="$PROJECT_DIR$/model/DnaMetaData.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dup.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Dup.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dup.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Dup.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Exit.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exit.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Exit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactoryCommand.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller/FactoryCommand.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactoryCommand.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/FactoryCommand.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IDNA.h" beforeDir="false" afterPath="$PROJECT_DIR$/model/IDNA.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Load.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Load.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Load.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Load.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller/New.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/New.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/view/Parser.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/view/Parser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rename.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Rename.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rename.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Rename.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Save.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Save.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Save.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Save.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Show.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Show.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Show.h" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Show.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dnaFile.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dna_seq.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/model/dna_seq.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dna_seq.h" beforeDir="false" afterPath="$PROJECT_DIR$/model/dna_seq.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saveFile.txt" beforeDir="false" />
     </list>
     <ignored path="$USER_HOME$/Desktop/DNA/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -60,7 +90,7 @@
     <session id="549754927">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.38" value="2" />
           <entry key="project.opened" value="3" />
@@ -72,32 +102,32 @@
           <entry key="c" value="1" />
           <entry key="cbp" value="1" />
           <entry key="cmake" value="3" />
-          <entry key="cpp" value="55" />
+          <entry key="cpp" value="57" />
           <entry key="excellenteam_ella_c_dna_cfrenkel (disassembly)" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="h" value="36" />
+          <entry key="h" value="38" />
           <entry key="out" value="3" />
-          <entry key="txt" value="3" />
+          <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="4" />
           <entry key="Disassembly" value="1" />
-          <entry key="ObjectiveC" value="92" />
-          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="ObjectiveC" value="96" />
+          <entry key="PLAIN_TEXT" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cpp" value="1432" />
           <entry key="gitignore" value="5" />
-          <entry key="h" value="346" />
+          <entry key="h" value="391" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="1778" />
+          <entry key="ObjectiveC" value="1823" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -106,92 +136,29 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DnaData.h">
+        <entry file="file://$PROJECT_DIR$/controller/Controller.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            <state relative-caret-position="22">
+              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
               <folding>
-                <element signature="e#88#112#0" expanded="true" />
+                <element signature="e#43#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DnaData.cpp">
+        <entry file="file://$PROJECT_DIR$/controller/Command.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-428">
-              <caret line="45" column="122" selection-start-line="45" selection-start-column="122" selection-end-line="45" selection-end-column="122" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SharePointer.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-528" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IDNA.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DnaMetaData.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DnaMetaData.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-            </state>
+            <state relative-caret-position="-330" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Save.cpp">
+        <entry file="file://$PROJECT_DIR$/controller/Controller.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Load.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/New.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/include/c++/7/bits/stl_list.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="1019" selection-start-line="1019" selection-end-line="1019" />
+            <state relative-caret-position="264">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -233,6 +200,7 @@
         <option value="$PROJECT_DIR$/DnaMetaData.h" />
         <option value="$PROJECT_DIR$/DnaMetaData.cpp" />
         <option value="$PROJECT_DIR$/DnaData.cpp" />
+        <option value="$PROJECT_DIR$/controller/Controller.h" />
       </list>
     </option>
   </component>
@@ -260,6 +228,11 @@
               <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
               <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -275,11 +248,12 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fileExample" />
+      <recent name="$USER_HOME$/Desktop/DNA" />
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$USER_HOME$/Desktop/DNA" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -325,12 +299,12 @@
       <workItem from="1545961161066" duration="164000" />
       <workItem from="1546190982032" duration="1890000" />
       <workItem from="1546192972689" duration="22726000" />
-      <workItem from="1546398789619" duration="2011000" />
+      <workItem from="1546398789619" duration="4097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27000000" />
+    <option name="totallyTimeSpent" value="29086000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -356,7 +330,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.14506769" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.09864604" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3288201" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.47471452" />
@@ -394,36 +368,7 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Load.cpp</url>
-          <line>11</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/New.cpp</url>
-          <line>8</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/a.out" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/CMakeCCompilerId.c" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/a.out" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CMakeSystem.cmake" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CMakeCCompiler.cmake" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CMakeCXXCompiler.cmake" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" />
-    <entry file="file://$PROJECT_DIR$/a.out">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Show.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -444,12 +389,6 @@
           <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mySeqFile.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nyfile2.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -685,15 +624,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SharePointer.h">
+    <entry file="file://$PROJECT_DIR$/DnaData.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-528" />
+        <state relative-caret-position="-428">
+          <caret line="45" column="122" selection-start-line="45" selection-start-column="122" selection-end-line="45" selection-end-column="122" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DnaMetaData.h">
+    <entry file="file://$PROJECT_DIR$/file.dna.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Save.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        <state relative-caret-position="220">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -704,17 +648,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DnaData.cpp">
+    <entry file="file://$PROJECT_DIR$/DnaMetaData.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-428">
-          <caret line="45" column="122" selection-start-line="45" selection-start-column="122" selection-end-line="45" selection-end-column="122" />
+        <state relative-caret-position="28">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Save.cpp">
+    <entry file="file://$PROJECT_DIR$/fileExample/saveFile.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fileExample/mySeqFile.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fileExample/mySeq1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fileExample/myFile.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fileExample/dnaFile.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fileExample/nyfile2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SharePointer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="-528" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SharePointer.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/Controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding>
+            <element signature="e#43#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/Command.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/Controller.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>
