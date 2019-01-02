@@ -4,7 +4,7 @@
 
 #include "DnaMetaData.h"
 
-DnaMetaData::DnaMetaData(int id, std::string name,DNA * d)
+DnaMetaData::DnaMetaData(int id, std::string name,SharePointer<IDNA> d)
 {
     m_id = id;
     m_name = name;
@@ -13,15 +13,15 @@ DnaMetaData::DnaMetaData(int id, std::string name,DNA * d)
 
 bool DnaMetaData::operator==(const DnaMetaData & d)
 {
-    return *d.m_dnaPtr == *m_dnaPtr && d.m_name == m_name && d.m_id == m_id;
+    return d.m_dnaPtr == m_dnaPtr && d.m_name == m_name && d.m_id == m_id;
 }
 DNA & DnaMetaData::getDna()
 {
-    return *m_dnaPtr;
+    return *((DNA*)m_dnaPtr.get());
 }
 std::ostream& operator<<(std::ostream&os, const DnaMetaData & other)
 {
-    os << *other.m_dnaPtr;
+    os << *((DNA*)other.m_dnaPtr.get());
     return os;
 }
 

@@ -13,7 +13,7 @@ class DnaMetaData
 {
 public:
     DnaMetaData(){}
-    DnaMetaData(int, std::string, DNA *);
+    DnaMetaData(int, std::string, SharePointer<IDNA>);
     bool operator==(const DnaMetaData&);
     DNA & getDna();
     void setId(int);
@@ -27,7 +27,7 @@ public:
 private:
     int m_id;
     std::string m_name;
-    SharePointer<DNA> m_dnaPtr;
+    SharePointer<IDNA> m_dnaPtr;
 };
 
 

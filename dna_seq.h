@@ -6,9 +6,10 @@
 #define DNA_SEQ_H
 #include <iostream>
 #include <fstream>
+#include "IDNA.h"
 
 
-class DNA
+class DNA : public IDNA
 {
     public:
     // ************************ //

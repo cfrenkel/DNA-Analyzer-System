@@ -8,17 +8,20 @@
 int DnaData::number = 0;
 void DnaData::newDna(std::string name, std::string dna)
 {
+    DNA * d;
     try {
-            DNA * d = new DNA(dna);
+             d = new DNA(dna);
         }
     catch (const char * mes)
     {
         throw mes;
     }
-//    delete d;
+//    delete d
+
+    SharePointer<DNA> d1(new DNA(dna));
     ++number;
-    dna_id_map.insert(std::pair<int, DnaMetaData>(number, DnaMetaData(number, name, new DNA(dna))));
-    dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, DnaMetaData(number,name, new DNA(dna))));
+    dna_id_map.insert(std::pair<int, DnaMetaData>(number, DnaMetaData(number, name, d1)));
+    dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, DnaMetaData(number,name, d1)));
 //    printNameMap();
 //    printIdMap();
 }
@@ -34,13 +37,13 @@ void DnaData::newDna(std::string name, DNA dna)
 {
     ++number;
     try {
-    dna_id_map.insert(std::pair<int,DnaMetaData>(number, DnaMetaData(number,name, &dna)));
+    dna_id_map.insert(std::pair<int,DnaMetaData>(number, DnaMetaData(number,name, SharePointer<DNA>(new DNA(dna)))));
     }
     catch (char * mes)
     {
         throw mes;
     }
-    dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, DnaMetaData(number,name, &dna)));
+    dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, DnaMetaData(number,name,SharePointer<DNA>(new DNA(dna)))));
 //    printNameMap();
 //    printIdMap();
 }
