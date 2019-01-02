@@ -41,7 +41,6 @@ void Controller::run()
         }
         catch (const char *message) {
             commandInterface.output(message);
-            return;
         }
         //printParser(par);
     }

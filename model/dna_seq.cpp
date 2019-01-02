@@ -12,7 +12,7 @@ void check_seq(const char * seq)
 {
     //switch ....
     if (strlen(seq)%3 != 0)
-        throw "not divided 3";
+        throw "not divided 3\n";
 }
 //DNA::DNA(std::string seq)
 //{
@@ -164,7 +164,7 @@ bool DNA::operator!=(const char * other) const
 DNA::Nucleotide & DNA::operator[](const int index) const
 {
     if (index>=getLength())
-        throw "index out of range";
+        throw "index out of range\n";
     return DNA_seq[index];
 }
 int DNA::getLength() const
@@ -192,7 +192,7 @@ std::fstream& operator<<(std::fstream&os, const DNA & other)
 DNA::DNA(const DNA  other, int from, int to)
 {
     if (to > m_length || from<0 || from>to)
-        throw "No Valid Index";
+        throw "Invalid Index\n";
     int length = to - from;
     m_length = length;
     DNA_seq = new Nucleotide[length];
@@ -224,7 +224,7 @@ void check_nucleotid(const char nuc)
     char c = toupper(nuc);
     if (c != 'A' && c != 'G' && c!='T' && c!='C')
     {
-        throw  "invalid character";
+        throw  "invalid character\n";
     }
 }
 DNA::Nucleotide::Nucleotide(const char nuc)
@@ -301,7 +301,7 @@ DNA::Nucleotide DNA::Nucleotide::pair() const
         case 'A':
             return Nucleotide('T');
         default:
-            assert("Invalid Charter");
+            assert("Invalid Charter\n");
     }
 }
 std::ostream& operator<<(std::ostream&os, DNA::Nucleotide & other)
