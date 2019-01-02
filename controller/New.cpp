@@ -6,24 +6,33 @@
 
 void New::action(std::list<std::string> arguments, DnaData & data)
 {
-    std::string del = arguments.back().substr(0,1);
-    std::string arg = arguments.back().substr(1,arguments.back().length());
-    try {
-        if (del == "#")
-        {
-
-        }
-        else
-        {
-            data.newDna(arg, arguments.front());
-        }
+    std::string name;
+    if (arguments.size() > 1)
+    {
+        std::string del = arguments.back().substr(0,1);
+            if (del != "@")
+            {
+                throw "Invalid Name Of Sequence\n";
+            }
+        name = arguments.back().substr(1,arguments.back().length());
     }
+    else
+    {
+        std::stringstream ss;
+        ss << "seq" << data.getSeqNumber();
+        name = ss.str();
+    }
+    try
+    {
+       data.newDna(name, arguments.front());
+    }
+
     catch (const char * mes)
     {
         throw mes;
     }
     std::stringstream ss;
-    int id = data.getIdByName(arg);
-    ss << "[" << data.getIdByName(arg) << "] " << arg <<": " << arguments.front() << "\n";
+    int id = data.getIdByName(name);
+    ss << "[" << data.getIdByName(name) << "] " << name <<": " << arguments.front() << "\n";
     m_message = ss.str();
 }

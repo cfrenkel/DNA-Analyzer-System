@@ -120,3 +120,7 @@ void DnaData::changeNameByNumber(std::string newName, int number)
     dna_id_map.erase(number);
     dna_id_map.insert(std::pair<int,DnaMetaData>(number, dd));
 }
+int DnaData::getSeqNumber()
+{
+    return number + 1;
+}
