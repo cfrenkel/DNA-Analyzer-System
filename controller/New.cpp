@@ -33,6 +33,11 @@ void New::action(std::list<std::string> arguments, DnaData & data)
     }
     std::stringstream ss;
     int id = data.getIdByName(name);
-    ss << "[" << data.getIdByName(name) << "] " << name <<": " << arguments.front() << "\n";
+    ss << "[" << data.getIdByName(name) << "] " << name <<": ";
+    int length = arguments.front().length();
+    if (length > 40)
+        ss << arguments.front().substr(0,32) << "..." << arguments.front().substr(length-3,length) << "\n";
+    else
+        ss << arguments.front() << "\n";
     m_message = ss.str();
 }

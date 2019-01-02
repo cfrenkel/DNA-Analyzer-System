@@ -22,7 +22,7 @@ void Show::action(std::list<std::string> args, DnaData & data)
     }
     std::stringstream ss;
     ss << "[" << d.getId() << "] " << d.getName() << ": " ;
-    int size;
+    int size = 99;
     if (args.size() > 1) {
         size = fromString(args.back());
         if (size > data.getLength(d))
@@ -31,6 +31,7 @@ void Show::action(std::list<std::string> args, DnaData & data)
     else {
         if (99 > data.getLength(d))
             size = data.getLength(d);
+
     }
     ss << data.getByNumber(d.getId()).getDna().slice(0, size) << "\n";
     m_message = ss.str();

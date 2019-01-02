@@ -29,7 +29,12 @@ void Load::action(std::list<std::string> args, DnaData &data)
 
     std::stringstream ss;
     int id = data.getIdByName(name);
-    ss << "[" << data.getIdByName(name) << "] " <<name<<": " << dna <<"\n";
+    ss << "[" << data.getIdByName(name) << "] " <<name<<": ";
+    int length = dna.length();
+    if (length > 40)
+        ss << dna.substr(0,32) << "..." << dna.substr(length-3,length) << "\n";
+    else
+        ss << dna << "\n";
     m_message = ss.str();
     //    data.printNameMap();
     //    data.printIdMap();
