@@ -16,6 +16,7 @@ public:
     void newDna(std::string, DNA);
     int getIdByName(std::string);
     std::string getNameById(int);
+    std::string getAllSeq();
     void printNameMap();
     void printIdMap();
     int getSeqNumber();

@@ -11,6 +11,7 @@
 #include "../controller/Dup.h"
 #include "../controller/Rename.h"
 #include "../controller/Del.h"
+#include "../controller/List.h"
 
 FactoryCommand::FactoryCommand()
 {
@@ -22,6 +23,8 @@ FactoryCommand::FactoryCommand()
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("dup", new Dup));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("rename", new Rename));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("del", new Del));
+    commandMap.insert(std::pair<std::string,SharePointer<Command> >("list", new List));
+
 }
 //
 Command* FactoryCommand::getCommand(std::string command)

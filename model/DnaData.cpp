@@ -4,7 +4,7 @@
 
 #include "../model/DnaData.h"
 #include "../model/DnaMetaData.h"
-
+#include <sstream>
 int DnaData::number = 0;
 
 void DnaData::newDna(std::string name, std::string dna)
@@ -128,4 +128,13 @@ int DnaData::getSeqNumber()
 int DnaData::getLength(DnaMetaData & d)
 {
     return d.getDna().getLength();
+}
+std::string DnaData::getAllSeq()
+{
+    std::map<int, DnaMetaData>::iterator itr;
+    std::stringstream ss;
+    for (itr = dna_id_map.begin(); itr != dna_id_map.end(); itr++) {
+        ss << "[" << itr->first << "] " << getNameById(itr->first) << ":" << itr->second.getStringDna() << "\n";
+    }
+    return ss.str();
 }
