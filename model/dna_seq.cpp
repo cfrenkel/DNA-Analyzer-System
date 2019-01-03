@@ -161,7 +161,7 @@ bool DNA::operator!=(const char * other) const
     }
     return false;
 }
-DNA::Nucleotide & DNA::operator[](const int index) const
+Nucleotide & DNA::operator[](const int index) const
 {
     if (index>=getLength())
         throw "index out of range\n";
@@ -215,98 +215,3 @@ DNA DNA::pair() const
     return d;
 }
 
-// ----------------------------------------------- //
-// --------------- Nucleotide --------------------- //
-// ----------------------------------------------- //
-
-void check_nucleotid(const char nuc)
-{
-    char c = toupper(nuc);
-    if (c != 'A' && c != 'G' && c!='T' && c!='C')
-    {
-        throw  "invalid character\n";
-    }
-}
-DNA::Nucleotide::Nucleotide(const char nuc)
-{
-    check_nucleotid(nuc);
-    nucleotide = toupper(nuc);
-}
-DNA::Nucleotide::Nucleotide() : nucleotide('A')
-{
-}
-DNA::Nucleotide::Nucleotide(const Nucleotide & other)
-{
-    if(this!=&other)
-    {
-        nucleotide = other.nucleotide;
-    }
-}
-DNA::Nucleotide::~Nucleotide()
-{
-
-}
-DNA::Nucleotide & DNA::Nucleotide::operator=(const DNA::Nucleotide other)
-{
-    if(this!=&other)
-    {
-        this->nucleotide = other.nucleotide;
-    }
-    return *this;
-}
-DNA::Nucleotide & DNA::Nucleotide::operator=(const char nuc)
-{
-    check_nucleotid(nuc);
-    if(this->nucleotide!=nuc)
-    {
-        this->nucleotide = nuc;
-    }
-    return *this;
-
-}
-bool DNA::Nucleotide::operator==(const Nucleotide & other) const
-{
-    return other.nucleotide == this->nucleotide;
-}
-bool DNA::Nucleotide::operator!=(const Nucleotide & other) const
-{
-    return !(this->nucleotide==other.nucleotide);
-}
-bool DNA::Nucleotide::operator==(const char c) const
-{
-    return this->nucleotide==toupper(c);
-}
-bool DNA::Nucleotide::operator!=(const char c) const
-{
-    return !(this->nucleotide==toupper(c));
-}
-DNA::Nucleotide::operator Nucleotide() const
-{
-    // return this;
-}
-DNA::Nucleotide::operator char() const
-{
-    return nucleotide;
-}
-DNA::Nucleotide DNA::Nucleotide::pair() const
-{
-    switch (nucleotide)
-    {
-        case 'C':
-            return Nucleotide('G');
-        case 'G':
-            return Nucleotide('C');
-        case 'T':
-            return Nucleotide('A');
-        case 'A':
-            return Nucleotide('T');
-        default:
-            assert("Invalid Charter\n");
-    }
-}
-std::ostream& operator<<(std::ostream&os, DNA::Nucleotide & other)
-{
-
-    os<<other.nucleotide;
-    return os;
-}

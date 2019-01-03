@@ -2,6 +2,7 @@
 // Created by cfrenkel on 12/27/18.
 //
 
+#include <sstream>
 #include "../model/DnaMetaData.h"
 
 DnaMetaData::DnaMetaData(int id, std::string name,SharePointer<IDNA> d)
@@ -40,4 +41,15 @@ std::string DnaMetaData::getName()
 void DnaMetaData::setName(std::string name)
 {
     m_name = name;
+}
+
+std::string DnaMetaData::getStringDna(int size)
+{
+    std::stringstream ss;
+    size_t len = std::min(size, m_dnaPtr->getLength());
+    for( int i = 0; i < len; ++i)
+    {
+        ss << (*m_dnaPtr)[i];
+    }
+    return ss.str();
 }

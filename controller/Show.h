@@ -11,6 +11,7 @@
 class Show: public Command
 {
     void action(std::list<std::string>, DnaData &);
+    int initSize(std::list<std::string> , int );
 };
 
 

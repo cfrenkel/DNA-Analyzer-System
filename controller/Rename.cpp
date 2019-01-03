@@ -24,6 +24,6 @@ void Rename::action(std::list<std::string> args, DnaData & data)
     }
 
     std::stringstream ss;
-    ss << "[" << data.getIdByName(newName) << "] " << newName <<": " << data.getIdByName(newName) << "\n";
+    ss << "[" << data.getIdByName(newName) << "] " << newName <<": " << data.getByName(newName) << "\n";
     m_message = ss.str();
 }

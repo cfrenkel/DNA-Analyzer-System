@@ -4,47 +4,20 @@
 
 #ifndef DNA_SEQ_H
 #define DNA_SEQ_H
+
 #include <iostream>
 #include <fstream>
 #include "../model/IDNA.h"
+#include "../model/Necleotide.h"
 
 
 class DNA : public IDNA
 {
     public:
-    // ************************ //
-    // **** Nucleotide Class *** //
-    // ************************ //
-    class Nucleotide
-    {
-        private:
-            char nucleotide;
-        public:
-            explicit Nucleotide(const char nuc);
-            Nucleotide();
-            Nucleotide(const Nucleotide & other);
-            ~Nucleotide();
-
-            Nucleotide & operator=(const Nucleotide other);
-            Nucleotide & operator=(const char nuc);
-
-            bool operator==(const Nucleotide & other) const;
-            bool operator!=(const Nucleotide & other) const;
-            bool operator==(const char c) const;
-            bool operator!=(const char c) const;
-
-            friend std::ostream&operator<<(std::ostream&os, Nucleotide & other);
-            operator Nucleotide() const;
-            operator char() const ;
-            Nucleotide pair() const;
-
-            //convert
-    };
 
     DNA(std::string seq);
     DNA(char * seq);
     DNA(const DNA & other);
-
 
     DNA& operator=(const DNA other);
     DNA& operator=(const char * seq);

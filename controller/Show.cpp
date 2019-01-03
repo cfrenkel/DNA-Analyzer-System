@@ -5,6 +5,21 @@
 #include "../controller/Show.h"
 #include "FactoryCommand.h"
 
+int Show::initSize(std::list<std::string> args, int length)
+{
+    int size = 99;
+    if (args.size() > 1) {
+        size = fromString(args.back());
+        if (size > length)
+            size = length;
+    }
+    else {
+        if (size > length)
+            size = length;
+
+    }
+    return size;
+}
 
 void Show::action(std::list<std::string> args, DnaData & data)
 {
@@ -22,18 +37,8 @@ void Show::action(std::list<std::string> args, DnaData & data)
     }
     std::stringstream ss;
     ss << "[" << d.getId() << "] " << d.getName() << ": " ;
-    int size = 99;
-    if (args.size() > 1) {
-        size = fromString(args.back());
-        if (size > data.getLength(d))
-            size = data.getLength(d);
-    }
-    else {
-        if (99 > data.getLength(d))
-            size = data.getLength(d);
 
-    }
-    ss << data.getByNumber(d.getId()).getDna().slice(0, size) << "\n";
+    ss << data.getByNumber(d.getId()).getStringDna(initSize(args, data.getLength(d))) << "\n";
     m_message = ss.str();
 }
 

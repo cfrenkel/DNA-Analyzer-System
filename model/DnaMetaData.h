@@ -20,6 +20,7 @@ public:
     int getId();
     std::string getName();
     void setName(std::string);
+    std::string getStringDna(int size = 99);
     friend std::ostream&operator<<(std::ostream&os, const DnaMetaData & other);
 
 

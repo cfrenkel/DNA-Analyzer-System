@@ -5,10 +5,11 @@
 #ifndef DNA_IDNA_H
 #define DNA_IDNA_H
 
+#include "../model/Necleotide.h"
 class IDNA
 {
 public:
-    int getLength();
-    IDNA & operator[](int) const;
+    virtual int getLength() const = 0;
+    virtual Nucleotide & operator[](const int) const = 0;
 };
 #endif //DNA_IDNA_H
