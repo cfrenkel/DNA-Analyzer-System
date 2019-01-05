@@ -43,7 +43,7 @@ void Pair::action(std::list<std::string> args, DnaData & data)
 
     data.newDna(name.str(), d.getDna().pair());
     std::stringstream ss;
-    ss << "[" << data.getIdByName(name.str()) << "] " << name.str() <<": " << data.getByName(name.str()) << "\n";
+    ss << "[" << data.getIdByName(name.str()) << "] " << name.str() <<": " << data.getByName(name.str()).getStringDna2() << "\n";
     m_message = ss.str();
 
 }

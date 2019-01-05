@@ -53,3 +53,21 @@ std::string DnaMetaData::getStringDna(int size)
     }
     return ss.str();
 }
+
+std::string DnaMetaData::getStringDna2()
+{
+    std::stringstream ss;
+    if (m_dnaPtr->getLength() < 40)
+        return getStringDna();
+    size_t length = m_dnaPtr->getLength();
+    for( size_t i = 0; i < 32; ++i)
+    {
+        ss << (*m_dnaPtr)[i];
+    }
+    ss << "...";
+    for( size_t i = length-3; i < length; ++i)
+    {
+        ss << (*m_dnaPtr)[i];
+    }
+    return ss.str();
+}

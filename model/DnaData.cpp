@@ -145,7 +145,7 @@ std::string DnaData::getAllSeq()
     std::map<int, DnaMetaData>::iterator itr;
     std::stringstream ss;
     for (itr = dna_id_map.begin(); itr != dna_id_map.end(); itr++) {
-        ss << "[" << itr->first << "] " << getNameById(itr->first) << ":" << itr->second.getStringDna() << "\n";
+        ss << "[" << itr->first << "] " << getNameById(itr->first) << ":" << itr->second.getStringDna2() << "\n";
     }
     return ss.str();
 }

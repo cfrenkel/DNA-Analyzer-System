@@ -1,4 +1,5 @@
 #include "../model/DNAReader.h"
+#include "../controller/ERROR_CODES.h"
 //
 // Created by cfrenkel on 10/29/18.
 //
@@ -6,6 +7,8 @@
 DNAReader::DNAReader(std::string name)
 {
     myfile.open(name.c_str());
+    if (!myfile.is_open())
+        throw FILE_NOT_FOUND;
 }
 std::string  DNAReader::read()
 {

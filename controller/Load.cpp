@@ -31,7 +31,7 @@ void Load::action(std::list<std::string> args, DnaData &data)
     data.newDna(name, dna);
 
     std::stringstream ss;
-    ss << "[" << data.getIdByName(name) << "] " <<name<<": " << getStringDna(dna) << "\n";
+    ss << "[" << data.getIdByName(name) << "] " <<name<<": " << data.getByName(name).getStringDna2() << "\n";
     m_message = ss.str();
     //    data.printNameMap();
     //    data.printIdMap();

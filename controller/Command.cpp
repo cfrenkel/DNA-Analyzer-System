@@ -12,13 +12,3 @@ int Command::fromString(std::string s)
     return value;
 }
 
-std::string Command::getStringDna(std::string dna)
-{
-    int length = dna.length();
-    std::stringstream ss;
-    if (length > 40)
-        ss << dna.substr(0,32) << "..." << dna.substr(length-3,length);
-    else
-        ss << dna;
-    return ss.str();
-}

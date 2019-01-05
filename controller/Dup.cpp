@@ -4,6 +4,7 @@
 
 #include "../controller/Dup.h"
 #include "../controller/ERROR_CODES.h"
+
 std::string getName(int number, DnaData & data)
 {
     static int id = 1;
@@ -45,7 +46,7 @@ void Dup::action(std::list<std::string> args, DnaData & data)
     }
 
     std::stringstream ss;
-    ss << "[" << data.getIdByName(name) << "] " << name <<": " << data.getByName(name) << "\n";
+    ss << "[" << data.getIdByName(name) << "] " << name <<": " << data.getByName(name).getStringDna2() << "\n";
     m_message = ss.str();
 }
 

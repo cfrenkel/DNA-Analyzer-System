@@ -31,6 +31,6 @@ void New::action(std::list<std::string> arguments, DnaData & data)
 
     data.newDna(name, arguments.front());
     std::stringstream ss;
-    ss << "[" << data.getIdByName(name) << "] " << name <<": " << getStringDna(arguments.front()) << "\n";
+    ss << "[" << data.getIdByName(name) << "] " << name <<": " << data.getByName(name).getStringDna2() << "\n";
     m_message = ss.str();
 }
