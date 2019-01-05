@@ -16,6 +16,7 @@ std::map<int, std::string> ExceptionManager::initMapCode()
     tempMap[4] = "Command Not Fount :(\n";
     tempMap[5] = "Invalid Command Or Argument :(\n";
     tempMap[6] = "Invalid Name Of Sequence :(\n";
+    tempMap[7] = "This Sequence Not Exist :(\n";
     return tempMap;
 }
 

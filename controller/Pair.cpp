@@ -7,7 +7,6 @@
 
 void Pair::action(std::list<std::string> args, DnaData & data)
 {
-    // > cmd >>> pair <seq> [: [@<new_seq_name>|@@]]
     if (args.size() > 3)
         throw INVALID_COMMAND;
 

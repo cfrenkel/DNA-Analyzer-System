@@ -55,7 +55,7 @@ void DnaData::newDna(std::string name, DNA dna)
 }
 int DnaData::getIdByName(std::string name)
 {
-    DnaMetaData dd = dna_string_map.at(name);
+    DnaMetaData dd = getByName(name);
     std::map<int,DnaMetaData>::iterator itr;
     for(itr = dna_id_map.begin() ; itr!= dna_id_map.end() ; itr++)
     {
@@ -68,7 +68,7 @@ int DnaData::getIdByName(std::string name)
 }
 std::string DnaData::getNameById(int number)
 {
-    DnaMetaData dd = dna_id_map.at(number);
+    DnaMetaData dd = getByNumber(number);
     std::map<std::string,DnaMetaData>::iterator itr;
     for(itr = dna_string_map.begin() ; itr!= dna_string_map.end() ; itr++)
     {
@@ -101,10 +101,14 @@ void DnaData::printNameMap()
 }
 DnaMetaData & DnaData::getByNumber(int number)
 {
+    if (dna_id_map.find(number) == dna_id_map.end())
+        throw NOT_EXIST_SEQ;
     return dna_id_map.at(number);
 }
-DnaMetaData& DnaData::getByName(std::string name)
+DnaMetaData & DnaData::getByName(std::string name)
 {
+    if (dna_string_map.find(name) == dna_string_map.end())
+        throw NOT_EXIST_SEQ;
     return dna_string_map.at(name);
 }
 void DnaData::changeNameByName(std::string newName, std::string oldName)
