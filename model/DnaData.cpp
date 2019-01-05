@@ -4,6 +4,7 @@
 
 #include "../model/DnaData.h"
 #include "../model/DnaMetaData.h"
+#include "../controller/ERROR_CODES.h"
 #include <sstream>
 int DnaData::number = 0;
 
@@ -38,14 +39,17 @@ void DnaData::newDnaByDna(std::string name, DnaMetaData dna)
 void DnaData::newDna(std::string name, DNA dna)
 {
     ++number;
+    SharePointer<DNA> d;
     try {
-    dna_id_map.insert(std::pair<int,DnaMetaData>(number, DnaMetaData(number,name, SharePointer<DNA>(new DNA(dna)))));
+        d = new DNA(dna);
     }
-    catch (char * mes)
+    catch (ERROR_CODE err)
     {
-        throw mes;
+        --number;
+        throw err;
     }
-    dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, DnaMetaData(number,name,SharePointer<DNA>(new DNA(dna)))));
+    dna_id_map.insert(std::pair<int,DnaMetaData>(number, DnaMetaData(number,name, d)));
+    dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, DnaMetaData(number,name, d)));
 //    printNameMap();
 //    printIdMap();
 }

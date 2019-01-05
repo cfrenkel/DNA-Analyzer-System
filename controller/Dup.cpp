@@ -3,19 +3,20 @@
 //
 
 #include "../controller/Dup.h"
-
+#include "../controller/ERROR_CODES.h"
 std::string getName(int number, DnaData & data)
 {
     static int id = 1;
     std::string name = data.getNameById(number);
     std::stringstream ss;
     ss << name << "_" << id++;
-    name = ss.str();
-    return name;
+    return ss.str();
 }
 
 void Dup::action(std::list<std::string> args, DnaData & data)
 {
+    if (args.size() > 2 || args.size() < 1)
+        throw INVALID_COMMAND;
     std::string s = args.front(); //dup from
     std::string del = s.substr(0, 1);
 
@@ -23,7 +24,7 @@ void Dup::action(std::list<std::string> args, DnaData & data)
     if (del == "#")
     {
         int number = fromString(s.substr(1, s.length()));
-        if (args.size() > 1)
+        if (args.size() != 1)
             name = args.back().substr(1,args.back().length()); // name copy
         else
             name = getName(number, data);
@@ -33,10 +34,10 @@ void Dup::action(std::list<std::string> args, DnaData & data)
     {
         if (del != "@")
         {
-            throw "Invalid Name Of Sequence\n";
+            throw INVALID_NAME_SEQ;
         }
         std::string seqName = s.substr(1, s.length());
-        if (args.size() > 1)
+        if (args.size() != 1)
             name = args.back().substr(1,args.back().length());
         else
             name = getName(data.getIdByName(seqName), data);

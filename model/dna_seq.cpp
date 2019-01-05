@@ -206,12 +206,12 @@ DNA DNA::slice(int from, int to) const
 {
     return DNA(*this, from, to);
 }
-DNA DNA::pair() const
+DNA  DNA::pair() const
 {
     DNA d(*this);
     for(size_t i = 0; i<m_length; i++)
     {
-        d[i] = d[m_length - i - 1].pair();
+        d[i] = DNA_seq[m_length - i - 1].pair();
     }
     return d;
 }

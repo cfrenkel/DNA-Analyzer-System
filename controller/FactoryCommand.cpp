@@ -12,6 +12,7 @@
 #include "../controller/Rename.h"
 #include "../controller/Del.h"
 #include "../controller/List.h"
+#include "../controller/Pair.h"
 #include "../controller/ERROR_CODES.h"
 FactoryCommand::FactoryCommand()
 {
@@ -24,6 +25,7 @@ FactoryCommand::FactoryCommand()
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("rename", SharePointer<Command>(new Rename)));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("del", SharePointer<Command>(new Del)));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("list", SharePointer<Command>(new List)));
+    commandMap.insert(std::pair<std::string,SharePointer<Command> >("pair", SharePointer<Command>(new Pair)));
 
 }
 
