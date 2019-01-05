@@ -5,7 +5,7 @@
 #include "Necleotide.h"
 #include <cstring>
 #include <assert.h>
-
+#include "../controller/ERROR_CODES.h"
 // ----------------------------------------------- //
 // --------------- Nucleotide --------------------- //
 // ----------------------------------------------- //
@@ -15,7 +15,7 @@ void check_nucleotid(const char nuc)
     char c = toupper(nuc);
     if (c != 'A' && c != 'G' && c!='T' && c!='C')
     {
-        throw  "invalid character\n";
+        throw  INVALID_CHARACTER;
     }
 }
 Nucleotide::Nucleotide(const char nuc)
@@ -71,10 +71,10 @@ bool Nucleotide::operator!=(const char c) const
 {
     return !(this->nucleotide==toupper(c));
 }
-Nucleotide::operator Nucleotide() const
-{
-    // return this;
-}
+//Nucleotide::operator Nucleotide() const
+//{
+//    // return this;
+//}
 Nucleotide::operator char() const
 {
     return nucleotide;
@@ -94,6 +94,7 @@ Nucleotide Nucleotide::pair() const
         default:
             assert("Invalid Charter\n");
     }
+    throw INVALID_CHARACTER;
 }
 std::ostream& operator<<(std::ostream&os, Nucleotide & other)
 {

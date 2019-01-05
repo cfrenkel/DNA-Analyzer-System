@@ -4,6 +4,7 @@
 #include "../model/dna_seq.h"
 #include <assert.h>
 #include <cstring>
+#include "../controller/ERROR_CODES.h"
 // -----------------------------------------------  //
 // --------------- DNA ---------------------------- //
 // ----------------------------------------------- //
@@ -12,7 +13,7 @@ void check_seq(const char * seq)
 {
     //switch ....
     if (strlen(seq)%3 != 0)
-        throw "not divided 3\n";
+        throw NOT_DIVIDE_3;
 }
 //DNA::DNA(std::string seq)
 //{
@@ -48,10 +49,10 @@ DNA::DNA(char * seq)
             DNA_seq[i] = toupper(seq[i]);
         }
     }
-    catch (char * msg)
+    catch (int error)
     {
         delete []  DNA_seq;
-        throw msg;
+        throw error;
     }
 }
 DNA::DNA(const DNA & other)
@@ -121,7 +122,7 @@ bool DNA::operator==(const DNA & other) const
 {
     if (other.m_length != m_length)
         return false;
-    for (int i=0; i<this->m_length; i++)
+    for (size_t i=0; i<this->m_length; i++)
     {
         if (other.DNA_seq[i] != this->DNA_seq[i])
             return false;
@@ -132,7 +133,7 @@ bool DNA::operator!=(const DNA & other)const
 {
     if (other.m_length != m_length)
         return true;
-    for (int i=0; i<this->m_length; i++)
+    for (size_t i=0; i<this->m_length; i++)
     {
         if (other.DNA_seq[i] != this->DNA_seq[i])
             return true;
@@ -143,7 +144,7 @@ bool DNA::operator==(const char * other) const
 {
     if (strlen(other) != m_length)
         return false;
-    for (int i=0; i<this->m_length; i++)
+    for (size_t i=0; i<this->m_length; i++)
     {
         if (this->DNA_seq[i] != other[i])
             return false;
@@ -154,7 +155,7 @@ bool DNA::operator!=(const char * other) const
 {
     if (strlen(other) != m_length)
         return true;
-    for (int i=0; i<this->m_length; i++)
+    for (size_t i=0; i<m_length; i++)
     {
         if (this->DNA_seq[i] != other[i])
             return true;
@@ -164,7 +165,7 @@ bool DNA::operator!=(const char * other) const
 Nucleotide & DNA::operator[](const int index) const
 {
     if (index>=getLength())
-        throw "index out of range\n";
+        throw OUT_OF_RANGE;
     return DNA_seq[index];
 }
 int DNA::getLength() const
@@ -189,14 +190,14 @@ std::fstream& operator<<(std::fstream&os, const DNA & other)
         os<<other.DNA_seq[i];
     return os;
 }
-DNA::DNA(const DNA  other, int from, int to)
+DNA::DNA(const DNA  other, size_t from, size_t to)
 {
     if (to > m_length || from<0 || from>to)
-        throw "Invalid Index\n";
-    int length = to - from;
+        throw INVALID_INDEX;
+    size_t length = to - from;
     m_length = length;
     DNA_seq = new Nucleotide[length];
-    for (int i = 0, j = from; i<length, j<to; i++, j++)
+    for (size_t i = 0, j = from; /*i< length,*/ j<to; i++, j++)
     {
         DNA_seq[i] = other.DNA_seq[j];
     }
@@ -208,7 +209,7 @@ DNA DNA::slice(int from, int to) const
 DNA DNA::pair() const
 {
     DNA d(*this);
-    for(int i = 0; i<m_length; i++)
+    for(size_t i = 0; i<m_length; i++)
     {
         d[i] = d[m_length - i - 1].pair();
     }

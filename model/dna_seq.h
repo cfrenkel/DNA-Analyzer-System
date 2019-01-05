@@ -36,8 +36,8 @@ class DNA : public IDNA
     DNA pair() const;
 
     private:
-        DNA(const DNA  other, int from, int to);
-        DNA(const DNA  other, int len);
+        DNA(const DNA  other, size_t from, size_t to);
+        DNA(const DNA  other, size_t len);
         Nucleotide * DNA_seq;
         unsigned int  m_length;
 

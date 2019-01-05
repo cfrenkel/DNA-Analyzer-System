@@ -15,11 +15,12 @@ void DnaData::newDna(std::string name, std::string dna)
         }
     catch (const char * mes)
     {
+        delete d;
         throw mes;
     }
 //    delete d
 
-    SharePointer<DNA> d1(new DNA(dna));
+    SharePointer<DNA> d1(d);
     ++number;
     dna_id_map.insert(std::pair<int, DnaMetaData>(number, DnaMetaData(number, name, d1)));
     dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, DnaMetaData(number,name, d1)));
@@ -59,6 +60,7 @@ int DnaData::getIdByName(std::string name)
             return itr->first;
         }
     }
+    return -1;
 }
 std::string DnaData::getNameById(int number)
 {
@@ -71,6 +73,7 @@ std::string DnaData::getNameById(int number)
             return itr->first;
         }
     }
+    return "Not Exist\n";
 }
 void DnaData::printIdMap()
 {

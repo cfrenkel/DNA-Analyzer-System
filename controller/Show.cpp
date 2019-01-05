@@ -4,7 +4,7 @@
 
 #include "../controller/Show.h"
 #include "FactoryCommand.h"
-
+#include "../controller/ERROR_CODES.h"
 int Show::initSize(std::list<std::string> args, int length)
 {
     int size = 99;
@@ -23,6 +23,8 @@ int Show::initSize(std::list<std::string> args, int length)
 
 void Show::action(std::list<std::string> args, DnaData & data)
 {
+    if (args.size() > 2)
+        throw INVALID_COMMAND;
     std::string s = args.front();
     std::string del = s.substr(0, 1);
 

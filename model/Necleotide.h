@@ -29,7 +29,7 @@ public:
     bool operator!=(const char c) const;
 
     friend std::ostream&operator<<(std::ostream&os, Nucleotide & other);
-    operator Nucleotide() const;
+//    operator Nucleotide() const;
     operator char() const ;
     Nucleotide pair() const;
 

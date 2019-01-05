@@ -5,6 +5,8 @@
 #include "../controller/Controller.h"
 #include "../controller/Command.h"
 #include "../controller/New.h"
+#include "../controller/ExceptionManager.h"
+#include "../controller/ERROR_CODES.h"
 #include <iterator>
 
 void printParser(std::list<std::string> par)
@@ -29,18 +31,12 @@ void Controller::run()
         Command *c;
         try {
             c = factoryCommand.getCommand(par.front());
-        }
-        catch (...) {
-            std::cout << "Command Not Found :( \n";
-            return;
-        }
-        par.pop_front();
-        try {
+            par.pop_front();
             c->action(par, m_dnaData);
             commandInterface.output(c->m_message);
         }
-        catch (const char *message) {
-            commandInterface.output(message);
+        catch (ERROR_CODE error) {
+            commandInterface.output(ExceptionManager(error).getMsg());
         }
         //printParser(par);
     }

@@ -4,7 +4,7 @@
 
 #include "../controller/Save.h"
 #include "../model/DNAWriter.h"
-
+#include "../controller/ERROR_CODES.h"
 std::string getFileName(std::string name)
 {
     std::stringstream ss;
@@ -14,6 +14,8 @@ std::string getFileName(std::string name)
 }
 void Save::action(std::list<std::string> args, DnaData & data)
 {
+    if (args.size() > 2)
+        throw INVALID_COMMAND;
     std::string s = args.front();   // seq name
     std::string del = s.substr(0, 1);
 
@@ -37,7 +39,7 @@ void Save::action(std::list<std::string> args, DnaData & data)
     else
     {
         std::string name_of_dna = s.substr(1, s.length());
-        if (args.size() > 1) {
+        if (args.size() == 1) {
             DNAWriter writer(args.back());
             writer.Write(data.getByName(name_of_dna).getDna());
         }

@@ -11,5 +11,6 @@ class IDNA
 public:
     virtual int getLength() const = 0;
     virtual Nucleotide & operator[](const int) const = 0;
+    virtual ~IDNA(){}
 };
 #endif //DNA_IDNA_H

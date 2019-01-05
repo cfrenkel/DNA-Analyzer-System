@@ -9,6 +9,7 @@
 
 class New : public Command
 {
+    static bool reg;
 public:
     void action(std::list<std::string>, DnaData &);
 //    void help();

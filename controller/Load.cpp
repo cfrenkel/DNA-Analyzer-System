@@ -4,16 +4,19 @@
 
 #include "../controller/Load.h"
 #include "../model/DNAReader.h"
+#include "../controller/ERROR_CODES.h"
 
 void Load::action(std::list<std::string> args, DnaData &data)
 {
+    if (args.size() > 2 || args.size() < 1)
+        throw INVALID_COMMAND;
     std::string name;
     if (args.size() > 1)
     {
         std::string del = args.back().substr(0,1);
         if (del != "@")
         {
-            throw "Invalid Name Of Sequence\n";
+            throw INVALID_NAME_SEQ;
         }
         name = args.back().substr(1,args.back().length());
     }
@@ -28,7 +31,6 @@ void Load::action(std::list<std::string> args, DnaData &data)
     data.newDna(name, dna);
 
     std::stringstream ss;
-    int id = data.getIdByName(name);
     ss << "[" << data.getIdByName(name) << "] " <<name<<": " << getStringDna(dna) << "\n";
     m_message = ss.str();
     //    data.printNameMap();

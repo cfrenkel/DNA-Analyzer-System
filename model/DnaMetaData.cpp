@@ -47,7 +47,7 @@ std::string DnaMetaData::getStringDna(int size)
 {
     std::stringstream ss;
     size_t len = std::min(size, m_dnaPtr->getLength());
-    for( int i = 0; i < len; ++i)
+    for( size_t i = 0; i < len; ++i)
     {
         ss << (*m_dnaPtr)[i];
     }

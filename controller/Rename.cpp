@@ -3,9 +3,12 @@
 //
 
 #include "../controller/Rename.h"
+#include "../controller/ERROR_CODES.h"
 
 void Rename::action(std::list<std::string> args, DnaData & data)
 {
+    if (args.size() > 2)
+        throw INVALID_COMMAND;
     // rename <seq> @<new_name>
     std::string oldDna = args.front();
     std::string newName = args.back().substr(1, args.back().length());
