@@ -14,6 +14,7 @@
 #include "../controller/List.h"
 #include "../controller/Pair.h"
 #include "../controller/Slice.h"
+#include "../controller/Replace.h"
 #include "../controller/ERROR_CODES.h"
 
 FactoryCommand::FactoryCommand() {
@@ -28,6 +29,8 @@ FactoryCommand::FactoryCommand() {
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("list", SharePointer<Command>(new List)));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("slice", SharePointer<Command>(new Slice)));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("pair", SharePointer<Command>(new Pair)));
+    commandMap.insert(std::pair<std::string,SharePointer<Command> >("replace", SharePointer<Command>(new Replace)));
+
 }
 
 Command * FactoryCommand::getCommand(std::string command)

@@ -30,8 +30,8 @@ void Pair::action(std::list<std::string> args, DnaData & data)
         d = &(data.getByName(seqName));
     }
 
-    PairDecorator * sliceDecorator = new PairDecorator(d->getDnaA());
-    d->setPtr(sliceDecorator);
+    PairDecorator * pairDecorator = new PairDecorator(d->getDnaA());
+    d->setPtr(pairDecorator);
 
     std::string parName = args.back();
     std::stringstream name;
