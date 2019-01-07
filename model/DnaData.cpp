@@ -35,6 +35,8 @@ void DnaData::newDnaByDna(std::string name, DnaMetaData dna)
     dna.setName(name);
     dna_id_map.insert(std::pair<int, DnaMetaData>(number, dna));
     dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, dna));
+//    printIdMap();
+//    printNameMap();
 }
 void DnaData::newDna(std::string name, DNA dna)
 {
@@ -70,33 +72,31 @@ std::string DnaData::getNameById(int number)
 {
     DnaMetaData dd = getByNumber(number);
     std::map<std::string,DnaMetaData>::iterator itr;
+    std::string name;
     for(itr = dna_string_map.begin() ; itr!= dna_string_map.end() ; itr++)
     {
         if (itr->second == dd)
         {
-            return itr->first;
+            name =  itr->first;
         }
     }
-    return "Not Exist\n";
+    return name;
 }
 void DnaData::printIdMap()
 {
-
     std::map<int,DnaMetaData>::iterator itr;
-    std::cout << dna_id_map.size() << " \n";
     for(itr = dna_id_map.begin() ; itr!= dna_id_map.end() ; itr++)
     {
         DnaMetaData d = itr->second;
-        std::cout << "Id: " << itr->first << " dna: " << itr->second << "\n";
+        std::cout << "Id: " << itr->first << " dna: " << itr->second.getDna() << "\n";
     }
 }
 void DnaData::printNameMap()
 {
-    std::cout << dna_id_map.size() << " \n";
     std::map<std::string,DnaMetaData>::iterator itr;
     for(itr = dna_string_map.begin() ; itr!= dna_string_map.end() ; itr++)
     {
-        std::cout << "name: " << itr->first << " dna: " << itr->second << "\n";
+        std::cout << "name: " << itr->first << " dna: " << itr->second.getDna() << "\n";
     }
 }
 DnaMetaData & DnaData::getByNumber(int number)
@@ -145,7 +145,7 @@ std::string DnaData::getAllSeq()
     std::map<int, DnaMetaData>::iterator itr;
     std::stringstream ss;
     for (itr = dna_id_map.begin(); itr != dna_id_map.end(); itr++) {
-        ss << "[" << itr->first << "] " << getNameById(itr->first) << ":" << itr->second.getStringDna2() << "\n";
+        ss << "[" << itr->first << "] " << itr->second.getName() << ":" << itr->second.getStringDna2() << "\n";
     }
     return ss.str();
 }

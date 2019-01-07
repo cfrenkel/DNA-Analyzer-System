@@ -98,7 +98,6 @@ Nucleotide Nucleotide::pair() const
 }
 std::ostream& operator<<(std::ostream&os, Nucleotide & other)
 {
-
     os<<other.nucleotide;
     return os;
 }

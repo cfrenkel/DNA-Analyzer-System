@@ -16,6 +16,12 @@ bool DnaMetaData::operator==(const DnaMetaData & d)
 {
     return d.m_dnaPtr == m_dnaPtr && d.m_name == m_name && d.m_id == m_id;
 }
+
+SharePointer<IDNA> DnaMetaData::getDnaA()
+{
+    return m_dnaPtr;
+    //return *((DNA*)m_dnaPtr.get());
+}
 DNA & DnaMetaData::getDna()
 {
     return *((DNA*)m_dnaPtr.get());
@@ -70,4 +76,9 @@ std::string DnaMetaData::getStringDna2()
         ss << (*m_dnaPtr)[i];
     }
     return ss.str();
+}
+
+void DnaMetaData::setPtr(IDNA * p)
+{
+    m_dnaPtr = p;
 }

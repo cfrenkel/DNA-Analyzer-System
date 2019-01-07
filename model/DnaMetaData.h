@@ -16,10 +16,12 @@ public:
     DnaMetaData(int, std::string, SharePointer<IDNA>);
     bool operator==(const DnaMetaData&);
     DNA & getDna();
+    SharePointer<IDNA> getDnaA();
     void setId(int);
     int getId();
     std::string getName();
     void setName(std::string);
+    void setPtr(IDNA * );
     std::string getStringDna(int size = 99);
     std::string getStringDna2();
     friend std::ostream&operator<<(std::ostream&os, const DnaMetaData & other);

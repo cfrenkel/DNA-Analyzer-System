@@ -5,10 +5,12 @@
 #ifndef EXCELLENTEAM_ELLA_C_DNA_CFRENKEL_SLICE_H
 #define EXCELLENTEAM_ELLA_C_DNA_CFRENKEL_SLICE_H
 
+#include "../controller/Command.h"
 
-class Slice
+class Slice : public Command
 {
-
+public:
+    void action(std::list<std::string>, DnaData &);
 };
 
 

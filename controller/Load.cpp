@@ -27,8 +27,7 @@ void Load::action(std::list<std::string> args, DnaData &data)
         name = ss.str();
     }
     DNAReader reader(args.front());
-    std::string dna = reader.read();
-    data.newDna(name, dna);
+    data.newDna(name, reader.read());
 
     std::stringstream ss;
     ss << "[" << data.getIdByName(name) << "] " <<name<<": " << data.getByName(name).getStringDna2() << "\n";

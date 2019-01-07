@@ -13,9 +13,10 @@
 #include "../controller/Del.h"
 #include "../controller/List.h"
 #include "../controller/Pair.h"
+#include "../controller/Slice.h"
 #include "../controller/ERROR_CODES.h"
-FactoryCommand::FactoryCommand()
-{
+
+FactoryCommand::FactoryCommand() {
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("new", SharePointer<Command>(new New)));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("load", SharePointer<Command>(new Load)));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("save", SharePointer<Command>(new Save)));
@@ -25,8 +26,8 @@ FactoryCommand::FactoryCommand()
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("rename", SharePointer<Command>(new Rename)));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("del", SharePointer<Command>(new Del)));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("list", SharePointer<Command>(new List)));
+    commandMap.insert(std::pair<std::string,SharePointer<Command> >("slice", SharePointer<Command>(new Slice)));
     commandMap.insert(std::pair<std::string,SharePointer<Command> >("pair", SharePointer<Command>(new Pair)));
-
 }
 
 Command * FactoryCommand::getCommand(std::string command)
@@ -38,8 +39,15 @@ Command * FactoryCommand::getCommand(std::string command)
     return commandMap[command].get();
 }
 
-////SharePointer<FactoryCommand> FactoryCommand:: = SharePointer<FactoryCommand>();
-////
+//bool FactoryCommand::registerCommand(std::string command, SharePointer<Command> sp)
+//{
+//    commandMap.insert(std::pair<std::string,SharePointer<Command> >(command, sp));
+//    return true;
+//}
+
+
+//SharePointer<FactoryCommand> FactoryCommand:: = SharePointer<FactoryCommand>();
+
 //SharePointer<FactoryCommand> FactoryCommand::getInstance()
 //{
 //    if (!m_instance)
@@ -48,10 +56,4 @@ Command * FactoryCommand::getCommand(std::string command)
 //    }
 //
 //    return m_instance;
-//}
-//
-//bool FactoryCommand::registerCommand(std::string command, SharePointer<Command> sp)
-//{
-//    commandMap[command] = sp;
-//    return true;
 //}
