@@ -79,18 +79,18 @@ Nucleotide::operator char() const
 {
     return nucleotide;
 }
-Nucleotide Nucleotide::pair() const
+Nucleotide & Nucleotide::pair() const
 {
     switch (nucleotide)
     {
         case 'C':
-            return Nucleotide('G');
+            return *(new Nucleotide('G'));
         case 'G':
-            return Nucleotide('C');
+            return *(new Nucleotide('C'));
         case 'T':
-            return Nucleotide('A');
+            return *(new Nucleotide('A'));
         case 'A':
-            return Nucleotide('T');
+            return *(new Nucleotide('T'));
         default:
             assert("Invalid Charter\n");
     }

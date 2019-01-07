@@ -71,16 +71,7 @@ int DnaData::getIdByName(std::string name)
 std::string DnaData::getNameById(int number)
 {
     DnaMetaData dd = getByNumber(number);
-    std::map<std::string,DnaMetaData>::iterator itr;
-    std::string name;
-    for(itr = dna_string_map.begin() ; itr!= dna_string_map.end() ; itr++)
-    {
-        if (itr->second == dd)
-        {
-            name =  itr->first;
-        }
-    }
-    return name;
+    return dd.getName();
 }
 void DnaData::printIdMap()
 {

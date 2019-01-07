@@ -31,7 +31,7 @@ public:
     friend std::ostream&operator<<(std::ostream&os, Nucleotide & other);
 //    operator Nucleotide() const;
     operator char() const ;
-    Nucleotide pair() const;
+    Nucleotide & pair() const;
 
     //convert
 };
