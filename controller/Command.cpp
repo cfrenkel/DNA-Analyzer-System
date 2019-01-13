@@ -11,4 +11,3 @@ int Command::fromString(std::string s)
     ss >> value;
     return value;
 }
-

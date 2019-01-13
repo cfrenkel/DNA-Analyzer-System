@@ -78,7 +78,7 @@ std::string DnaMetaData::getStringDna2()
     return ss.str();
 }
 
-void DnaMetaData::setPtr(IDNA * p)
+void DnaMetaData::setPtr(SharePointer<IDNA> p)
 {
     m_dnaPtr = p;
 }

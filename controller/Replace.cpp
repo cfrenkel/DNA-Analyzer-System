@@ -20,6 +20,24 @@ char convertToChar(std::string c)
     return '0';
 }
 
+std::string getNameReplace(std::string arg, DnaMetaData * d)
+{
+    std::string parName = arg;
+    std::stringstream name;
+
+    if (parName == "@@")
+        name << d->getName() << "_r" << d->getId();
+    else
+    {
+        if (parName.substr(0, 1) != "@")
+        {
+            return "Invalid Argumet :( \n";
+        }
+        else
+            name << parName.substr(1, parName.length());
+    }
+    return name.str();
+}
 void Replace::action(std::list<std::string> args, DnaData & data)
 {
     if (args.size() > 4)
@@ -51,28 +69,24 @@ void Replace::action(std::list<std::string> args, DnaData & data)
     int index = fromString(args.front());
     args.pop_front();
     char new_letter = convertToChar(args.front());
+    args.pop_front();
 
-    ReplaceDecorator * replaceDecorator = new ReplaceDecorator(d->getDnaA(), index, new_letter);
-    d->setPtr(replaceDecorator);
+    SharePointer<ReplaceDecorator> replaceDecor(new ReplaceDecorator(d->getDnaA(), index, new_letter));
 
-    std::string parName = args.back();
     std::stringstream name;
-    if (parName == "@@")
-        name << d->getName() << "_p" << d->getId();
-    else
+    if (args.size() < 1)
     {
-        if (parName.substr(0,1) != "@")
-        {
-            m_message = "Invalid Argumet :( \n";
-            return;
-        }
-        else
-            name << parName.substr(1, parName.length());
+        d->setPtr(replaceDecor);
+        name << d->getName();
     }
-    // [24] short_seq_s1_repl_seq_c1_p1: ACGGATCGTA
+    else {
 
-    d->setName(name.str());
+        // [24] short_seq_s1_repl_seq_c1_p1: ACGGATCGTA
+        name << getNameReplace(args.back(), d);
+        data.newDnaByIdna(name.str(), replaceDecor);
+    }
+
     std::stringstream ss;
-    ss << "[" << d->getId() << "] " << name.str() <<": " << d->getStringDna2() << "\n";
+    ss << "[" << data.getIdByName(name.str()) << "] " << name.str() <<": " << data.getByName(name.str()).getStringDna2()<< "\n";
     m_message = ss.str();
 }

@@ -5,16 +5,24 @@
 #include "../model/PairDecorator.h"
 #include "Pair.h"
 #include "../controller/ERROR_CODES.h"
+#include "../controller/ExceptionManager.h"
+
+std::string calcException(ERROR_CODE e)
+{
+    return ExceptionManager(e).getMsg();
+}
 
 void Pair::action(std::list<std::string> args, DnaData & data)
 {
     if (args.size() > 3)
-        throw INVALID_COMMAND;
-
+    {
+        m_message = calcException(INVALID_COMMAND);
+        return;
+    }
     std::string s = args.front(); //pair from
     std::string del = s.substr(0, 1);
-    DnaMetaData * d;
 
+    DnaMetaData  * d;
     if (del == "#")
     {
         int number = fromString(s.substr(1, s.length()));
@@ -24,14 +32,13 @@ void Pair::action(std::list<std::string> args, DnaData & data)
     {
         if (del != "@")
         {
-            throw INVALID_NAME_SEQ;
+            m_message = calcException(INVALID_COMMAND);
+            return;
         }
         std::string seqName = s.substr(1, s.length());
         d = &(data.getByName(seqName));
     }
-
-    PairDecorator * pairDecorator = new PairDecorator(d->getDnaA());
-    d->setPtr(pairDecorator);
+    SharePointer<PairDecorator> pairDecorator(new PairDecorator(d->getDnaA()));
 
     std::string parName = args.back();
     std::stringstream name;
@@ -40,15 +47,18 @@ void Pair::action(std::list<std::string> args, DnaData & data)
     else
     {
         if (parName.substr(0,1) != "@")
-            throw INVALID_COMMAND;
+        {
+            m_message = calcException(INVALID_COMMAND);
+            return;
+        }
         else
             name << parName.substr(1, parName.length());
     }
-    // [24] short_seq_s1_repl_seq_c1_p1: ACGGATCGTA
 
-    d->setName(name.str());
+    data.newDnaByIdna(name.str(), pairDecorator);
+
     std::stringstream ss;
-    ss << "[" << d->getId() << "] " << name.str() <<": " << d->getStringDna2() << "\n";
+    ss << "[" << data.getIdByName(name.str()) << "] " << name.str() <<": " << data.getByName(name.str()).getStringDna2()<< "\n";
     m_message = ss.str();
 
 }

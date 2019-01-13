@@ -14,19 +14,22 @@ class DnaMetaData
 public:
     DnaMetaData(){}
     DnaMetaData(int, std::string, SharePointer<IDNA>);
+
     bool operator==(const DnaMetaData&);
-    DNA & getDna();
-    SharePointer<IDNA> getDnaA();
+
+    void setName(std::string);
+    void setPtr(SharePointer<IDNA>);
     void setId(int);
+
     int getId();
     std::string getName();
-    void setName(std::string);
-    void setPtr(IDNA * );
+
+    DNA & getDna();
+    SharePointer<IDNA> getDnaA();
     std::string getStringDna(int size = 99);
     std::string getStringDna2();
+
     friend std::ostream&operator<<(std::ostream&os, const DnaMetaData & other);
-
-
 
 private:
     int m_id;

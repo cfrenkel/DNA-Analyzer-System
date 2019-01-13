@@ -28,11 +28,11 @@ void Save::action(std::list<std::string> args, DnaData & data)
         int number = fromString(s.substr(1, s.length()));
         if (args.size() > 1) {
             DNAWriter writer(args.back());
-            writer.Write(data.getByNumber(number).getDna());
+            writer.Write(data.getByNumber(number).getDnaA());
         }
         else {
             DNAWriter writer(getFileName(data.getNameById(number)));
-            writer.Write(data.getByNumber(number).getDna());
+            writer.Write(data.getByNumber(number).getDnaA());
         }
 
     }
@@ -41,11 +41,11 @@ void Save::action(std::list<std::string> args, DnaData & data)
         std::string name_of_dna = s.substr(1, s.length());
         if (args.size() == 1) {
             DNAWriter writer(args.back());
-            writer.Write(data.getByName(name_of_dna).getDna());
+            writer.Write(data.getByName(name_of_dna).getDnaA());
         }
         else {
             DNAWriter writer(getFileName(name_of_dna));
-            writer.Write(data.getByName(name_of_dna).getDna());
+            writer.Write(data.getByName(name_of_dna).getDnaA());
         }
     }
 

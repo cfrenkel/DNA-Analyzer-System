@@ -13,12 +13,15 @@ public:
 //    DnaData();
     void newDna(std::string, std::string);
     void newDnaByDna(std::string, DnaMetaData);
-    void newDna(std::string, DNA);
+    void newDnaByIdna(std::string, SharePointer<IDNA>);
+
     int getIdByName(std::string);
     std::string getNameById(int);
     std::string getAllSeq();
+
     void printNameMap();
     void printIdMap();
+
     int getSeqNumber();
     int getLength(DnaMetaData &);
 

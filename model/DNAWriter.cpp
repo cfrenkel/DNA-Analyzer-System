@@ -12,9 +12,10 @@ DNAWriter::DNAWriter(std::string name)
     if (!myfile.is_open())
         throw FILE_NOT_FOUND;
 }
-void DNAWriter::Write(const DNA & other)
+void DNAWriter::Write(const SharePointer<IDNA> other)
 {
-    myfile<<other;
+    for (int i = 0; i<other->getLength(); ++i)
+        myfile << (*other)[i];
     myfile.close();
 }
 DNAWriter::~DNAWriter()

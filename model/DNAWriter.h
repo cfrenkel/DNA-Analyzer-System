@@ -5,12 +5,13 @@
 #ifndef DNA_DNAWRITERTXT_H
 #define DNA_DNAWRITERTXT_H
 #include <fstream>
-class DNA;
+#include "../SharePointer.h"
+class IDNA;
 class DNAWriter
 {
     public:
         DNAWriter(std::string);
-        void Write(const DNA& other);
+        void Write(const SharePointer<IDNA> other);
         ~DNAWriter();
     private:
         // composition

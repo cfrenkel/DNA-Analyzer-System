@@ -38,20 +38,11 @@ void DnaData::newDnaByDna(std::string name, DnaMetaData dna)
 //    printIdMap();
 //    printNameMap();
 }
-void DnaData::newDna(std::string name, DNA dna)
+void DnaData::newDnaByIdna(std::string name, SharePointer<IDNA> dna)
 {
     ++number;
-    SharePointer<DNA> d;
-    try {
-        d = new DNA(dna);
-    }
-    catch (ERROR_CODE err)
-    {
-        --number;
-        throw err;
-    }
-    dna_id_map.insert(std::pair<int,DnaMetaData>(number, DnaMetaData(number,name, d)));
-    dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, DnaMetaData(number,name, d)));
+    dna_id_map.insert(std::pair<int,DnaMetaData>(number, DnaMetaData(number,name, dna)));
+    dna_string_map.insert(std::pair<std::string,DnaMetaData>(name, DnaMetaData(number,name, dna)));
 //    printNameMap();
 //    printIdMap();
 }
@@ -111,7 +102,6 @@ void DnaData::changeNameByName(std::string newName, std::string oldName)
     dna_string_map.insert(std::pair<std::string,DnaMetaData>(newName, dd));
     dna_id_map.erase(dd.getId());
     dna_id_map.insert(std::pair<int,DnaMetaData>(dd.getId(), dd));
-
 }
 void DnaData::changeNameByNumber(std::string newName, int number)
 {
