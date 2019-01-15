@@ -32,12 +32,19 @@ void Pair::action(std::list<std::string> args, DnaData & data)
 
     args.pop_front();
 
-    name = d.getNewSeqName(args, "p");
 
-    data.newDnaByIdna(name, pairDecorator);
+    if (args.size() < 1) {
+        d.setPtr(pairDecorator);
+        name = d.getName();
+    }
+    else
+    {
+        name = d.getNewSeqName(args, "p");
+        data.newDnaByIdna(name, pairDecorator);
+    }
 
     std::stringstream ss;
-    ss << "[" << data.getIdByName(name) << "] " << name <<": " << data.getByName(name).getSeqStringDna() << "\n";
+    ss << "[" << data.getIdByName(name) << "] " << name <<": " << data.getByNumber(data.getIdByName(name)).getSeqStringDna() << "\n";
     m_message = ss.str();
 
 }
