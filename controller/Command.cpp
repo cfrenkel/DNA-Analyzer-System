@@ -4,10 +4,3 @@
 
 #include "Command.h"
 
-int Command::fromString(std::string s)
-{
-    int value;
-    std::stringstream ss( s );
-    ss >> value;
-    return value;
-}

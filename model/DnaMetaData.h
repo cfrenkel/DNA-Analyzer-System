@@ -8,6 +8,7 @@
 #include "../model/dna_seq.h"
 #include "../SharePointer.h"
 #include <string>
+#include <list>
 
 class DnaMetaData
 {
@@ -23,11 +24,14 @@ public:
 
     int getId();
     std::string getName();
-
     DNA & getDna();
-    SharePointer<IDNA> getDnaA();
-    std::string getStringDna(int size = 99);
-    std::string getStringDna2();
+    SharePointer<IDNA> getSharePointerDna();
+
+    std::string getSeqStringDnaWithPar(int size = 99);
+    std::string getSeqStringDna();
+
+    std::string getNewSeqName(std::list<std::string>, std::string);
+    std::string getNewFileNameBySeq(std::list<std::string>);
 
     friend std::ostream&operator<<(std::ostream&os, const DnaMetaData & other);
 

@@ -17,15 +17,17 @@ bool DnaMetaData::operator==(const DnaMetaData & d)
     return d.m_dnaPtr == m_dnaPtr && d.m_name == m_name && d.m_id == m_id;
 }
 
-SharePointer<IDNA> DnaMetaData::getDnaA()
+SharePointer<IDNA> DnaMetaData::getSharePointerDna()
 {
     return m_dnaPtr;
     //return *((DNA*)m_dnaPtr.get());
 }
+
 DNA & DnaMetaData::getDna()
 {
     return *((DNA*)m_dnaPtr.get());
 }
+
 std::ostream& operator<<(std::ostream&os, const DnaMetaData & other)
 {
     os << *((DNA*)other.m_dnaPtr.get());
@@ -36,20 +38,23 @@ void DnaMetaData::setId(int id)
 {
     m_id = id;
 }
+
 int DnaMetaData::getId()
 {
     return m_id;
 }
+
 std::string DnaMetaData::getName()
 {
     return m_name;
 }
+
 void DnaMetaData::setName(std::string name)
 {
     m_name = name;
 }
 
-std::string DnaMetaData::getStringDna(int size)
+std::string DnaMetaData::getSeqStringDnaWithPar(int size)
 {
     std::stringstream ss;
     size_t len = std::min(size, m_dnaPtr->getLength());
@@ -60,11 +65,11 @@ std::string DnaMetaData::getStringDna(int size)
     return ss.str();
 }
 
-std::string DnaMetaData::getStringDna2()
+std::string DnaMetaData::getSeqStringDna()
 {
     std::stringstream ss;
     if (m_dnaPtr->getLength() < 40)
-        return getStringDna();
+        return getSeqStringDnaWithPar();
     size_t length = m_dnaPtr->getLength();
     for( size_t i = 0; i < 32; ++i)
     {
@@ -81,4 +86,28 @@ std::string DnaMetaData::getStringDna2()
 void DnaMetaData::setPtr(SharePointer<IDNA> p)
 {
     m_dnaPtr = p;
+}
+
+std::string DnaMetaData::getNewSeqName(std::list<std::string> args, std::string tav)
+{
+    std::stringstream ss;
+
+    if (args.empty() || args.front() == "@@")
+    {
+        ss << getName() << "_" << tav << getId();
+        return ss.str();
+    }
+    return args.front();
+}
+
+std::string DnaMetaData::getNewFileNameBySeq(std::list<std::string> args)
+{
+    std::stringstream ss;
+
+    if (args.size() == 1)
+    {
+        ss << getName() << ".rawdna";
+        return ss.str();
+    }
+    return args.front();
 }

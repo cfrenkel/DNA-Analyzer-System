@@ -14,51 +14,26 @@ std::string calcException(ERROR_CODE e)
 
 void Pair::action(std::list<std::string> args, DnaData & data)
 {
+    std::string name;
     if (args.size() > 3)
     {
         m_message = calcException(INVALID_COMMAND);
         return;
     }
     std::string s = args.front(); //pair from
-    std::string del = s.substr(0, 1);
 
-    DnaMetaData  * d;
-    if (del == "#")
-    {
-        int number = fromString(s.substr(1, s.length()));
-        d = &(data.getByNumber(number));
-    }
-    else
-    {
-        if (del != "@")
-        {
-            m_message = calcException(INVALID_COMMAND);
-            return;
-        }
-        std::string seqName = s.substr(1, s.length());
-        d = &(data.getByName(seqName));
-    }
-    SharePointer<PairDecorator> pairDecorator(new PairDecorator(d->getDnaA()));
+    DnaMetaData & d = data.getDnaByArgs(s);
 
-    std::string parName = args.back();
-    std::stringstream name;
-    if (parName == "@@")
-        name << d->getName() << "_p" << d->getId();
-    else
-    {
-        if (parName.substr(0,1) != "@")
-        {
-            m_message = calcException(INVALID_COMMAND);
-            return;
-        }
-        else
-            name << parName.substr(1, parName.length());
-    }
+    SharePointer<PairDecorator> pairDecorator(new PairDecorator(d.getSharePointerDna()));
 
-    data.newDnaByIdna(name.str(), pairDecorator);
+    args.pop_front();
+
+    name = d.getNewSeqName(args, "p");
+
+    data.newDnaByIdna(name, pairDecorator);
 
     std::stringstream ss;
-    ss << "[" << data.getIdByName(name.str()) << "] " << name.str() <<": " << data.getByName(name.str()).getStringDna2()<< "\n";
+    ss << "[" << data.getIdByName(name) << "] " << name <<": " << data.getByName(name).getSeqStringDna() << "\n";
     m_message = ss.str();
 
 }

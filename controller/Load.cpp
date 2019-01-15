@@ -10,27 +10,14 @@ void Load::action(std::list<std::string> args, DnaData &data)
 {
     if (args.size() > 2 || args.size() < 1)
         throw INVALID_COMMAND;
-    std::string name;
-    if (args.size() > 1)
-    {
-        std::string del = args.back().substr(0,1);
-        if (del != "@")
-        {
-            throw INVALID_NAME_SEQ;
-        }
-        name = args.back().substr(1,args.back().length());
-    }
-    else
-    {
-        std::stringstream ss;
-        ss << "seq" << data.getSeqNumber();
-        name = ss.str();
-    }
+
     DNAReader reader(args.front());
+    args.pop_front();
+    std::string name = data.getNameDnaByArgs(args);
     data.newDna(name, reader.read());
 
     std::stringstream ss;
-    ss << "[" << data.getIdByName(name) << "] " <<name<<": " << data.getByName(name).getStringDna2() << "\n";
+    ss << "[" << data.getIdByName(name) << "] " <<name<<": " << data.getByName(name).getSeqStringDna() << "\n";
     m_message = ss.str();
     //    data.printNameMap();
     //    data.printIdMap();

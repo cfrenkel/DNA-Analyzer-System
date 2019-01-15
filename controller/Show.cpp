@@ -5,42 +5,22 @@
 #include "../controller/Show.h"
 #include "FactoryCommand.h"
 #include "../controller/ERROR_CODES.h"
-int Show::initSize(std::list<std::string> args, int length)
-{
-    int size = 99;
-    if (args.size() > 1) {
-        size = fromString(args.back());
-        if (size > length)
-            size = length;
-    }
-    else {
-        if (size > length)
-            size = length;
+#include "../controller/Convert.h"
 
-    }
-    return size;
-}
 
 void Show::action(std::list<std::string> args, DnaData & data)
 {
     if (args.size() > 2)
         throw INVALID_COMMAND;
     std::string s = args.front();
-    std::string del = s.substr(0, 1);
 
     // show `<seq>` [<num_chars>]
-    DnaMetaData d;
-    if (del == "#") {
-         d = data.getByNumber(fromString(s.substr(1, s.length())));
-    }
-    else
-    {
-         d = data.getByName(s.substr(1, s.length()));
-    }
+    DnaMetaData & d = data.getDnaByArgs(s);
+
     std::stringstream ss;
     ss << "[" << d.getId() << "] " << d.getName() << ": " ;
 
-    ss << data.getByNumber(d.getId()).getStringDna(initSize(args, data.getLength(d))) << "\n";
+    ss << d.getSeqStringDnaWithPar(args.size() > 1? Convert::fromString(args.back()): 99) << "\n";
     m_message = ss.str();
 }
 

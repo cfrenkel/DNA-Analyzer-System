@@ -4,25 +4,8 @@
 
 #include "../model/SliceDecorator.h"
 #include "Slice.h"
+#include "../controller/Convert.h"
 
-std::string getNameSlice(std::string arg, DnaMetaData * d)
-{
-    std::string parName = arg;
-    std::stringstream name;
-
-    if (parName == "@@")
-        name << d->getName() << "_s" << d->getId();
-    else
-    {
-        if (parName.substr(0, 1) != "@")
-        {
-            return "Invalid Argumet :( \n";
-        }
-        else
-            name << parName.substr(1, parName.length());
-    }
-    return name.str();
-}
 
 void Slice::action(std::list<std::string> args, DnaData & data)
 {
@@ -30,38 +13,31 @@ void Slice::action(std::list<std::string> args, DnaData & data)
 
     if (args.size() < 3 || args.size() > 4)
        m_message = "Invalid Argument :(\n";
+
     std::string s = args.front();
-    std::string del = s.substr(0, 1);
+    DnaMetaData & d = data.getDnaByArgs(s);
 
-    DnaMetaData * d;
+    args.pop_front();
+    int from = Convert::fromString(args.front());
+    args.pop_front();
+    int to = Convert::fromString(args.front());
+    args.pop_front();
 
-    if (del == "#") {
-        d = &(data.getByNumber(fromString(s.substr(1, s.length()))));
-    }
-    else
-    {
-        d = &(data.getByName(s.substr(1, s.length())));
-    }
-    args.pop_front();
-    int from = fromString(args.front());
-    args.pop_front();
-    int to = fromString(args.front());
-    args.pop_front();
-    std::stringstream name;
-    SharePointer<SliceDecorator> sliceDecor(new SliceDecorator(d->getDnaA(), from, to, to-from));
+    std::string name;
+    SharePointer<SliceDecorator> sliceDecor(new SliceDecorator(d.getSharePointerDna(), from, to, to-from));
 
     if (args.size() < 1) {
-        d->setPtr(sliceDecor);
-        name << d->getName();
+        d.setPtr(sliceDecor);
+        name = d.getName();
     }
     else
     {
-        name << getNameSlice(args.back(), d);
-        data.newDnaByIdna(name.str(), sliceDecor);
+        name = d.getNewSeqName(args, "s");
+        data.newDnaByIdna(name, sliceDecor);
     }
 
     std::stringstream ss;
-    ss << "[" << data.getIdByName(name.str()) << "] " << name.str() <<": " << data.getByName(name.str()).getStringDna2()<< "\n";
+    ss << "[" << data.getIdByName(name) << "] " << name <<": " << data.getByNumber(data.getIdByName(name)).getSeqStringDna()<< "\n";
     m_message = ss.str();
 
 }

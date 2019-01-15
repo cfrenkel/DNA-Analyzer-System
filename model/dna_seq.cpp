@@ -15,12 +15,7 @@ void check_seq(const char * seq)
     if (strlen(seq)%3 != 0)
         throw NOT_DIVIDE_3;
 }
-//DNA::DNA(std::string seq)
-//{
-//    std::cout << seq << "\n";
-//    std::cout << seq.c_str() << "\n";
-//    DNA(seq.c_str());
-//}
+
 DNA::DNA(std::string seq)
 {
     int length = seq.length();
@@ -65,6 +60,7 @@ DNA::DNA(const DNA & other)
             DNA_seq[i] = other.DNA_seq[i];
         }
 }
+
 DNA& DNA::operator=(const DNA other)
 {
     if (this != &other) {
@@ -118,6 +114,7 @@ DNA& DNA::operator=(const std::string &seq)
     }
     return *this;
 }
+
 bool DNA::operator==(const DNA & other) const
 {
     if (other.m_length != m_length)
@@ -162,6 +159,7 @@ bool DNA::operator!=(const char * other) const
     }
     return false;
 }
+
 Nucleotide & DNA::operator[](const int index) const
 {
     if (index>=getLength())
@@ -178,6 +176,7 @@ DNA::~DNA()
         delete[] DNA_seq;
     }
 }
+
 std::ostream& operator<<(std::ostream&os, const DNA & other)
 {
     for (int i=0; i<other.getLength(); i++)

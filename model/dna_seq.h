@@ -27,15 +27,20 @@ class DNA : public IDNA
     bool operator!=(const DNA & other) const;
     bool operator==(const char * other) const;
     bool operator!=(const char * other) const;
+
     Nucleotide & operator[](const int index) const;
     int getLength() const;
+
     ~DNA();
+
     friend std::ostream&operator<<(std::ostream&os, const DNA & other);
     friend std::fstream&operator<<(std::fstream&os, const DNA & other);
+
     DNA slice(int from, int to) const;
     DNA pair() const;
 
     private:
+
         DNA(const DNA  other, size_t from, size_t to);
         DNA(const DNA  other, size_t len);
         Nucleotide * DNA_seq;
