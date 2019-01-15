@@ -14,7 +14,9 @@ class Command
 {
 public:
     virtual void action(std::list<std::string>, DnaData &) = 0;
+
     std::string m_message;
+
     virtual ~Command(){}
 //    virtual void help();
 };

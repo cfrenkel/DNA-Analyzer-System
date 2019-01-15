@@ -5,6 +5,9 @@
 #include "../controller/Save.h"
 #include "../model/DNAWriter.h"
 #include "../controller/ERROR_CODES.h"
+#include "FactoryCommand.h"
+
+bool Save::reg = FactoryCommand::registerCommand("save", SharePointer<Command>(new Save));
 
 void Save::action(std::list<std::string> args, DnaData & data)
 {

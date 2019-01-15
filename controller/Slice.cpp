@@ -5,6 +5,9 @@
 #include "../model/SliceDecorator.h"
 #include "Slice.h"
 #include "../controller/Convert.h"
+#include "FactoryCommand.h"
+
+bool Slice::reg = FactoryCommand::registerCommand("slice", SharePointer<Command>(new Slice));
 
 
 void Slice::action(std::list<std::string> args, DnaData & data)

@@ -5,6 +5,9 @@
 #include "../controller/Load.h"
 #include "../model/DNAReader.h"
 #include "../controller/ERROR_CODES.h"
+#include "FactoryCommand.h"
+
+bool Load::reg = FactoryCommand::registerCommand("load", SharePointer<Command>(new Load));
 
 void Load::action(std::list<std::string> args, DnaData &data)
 {

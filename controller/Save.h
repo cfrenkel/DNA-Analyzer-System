@@ -10,6 +10,7 @@
 
 class Save : public Command
 {
+    static bool reg;
 public:
     void action(std::list<std::string>, DnaData &);
 };

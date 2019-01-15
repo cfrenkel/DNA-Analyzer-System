@@ -4,6 +4,9 @@
 
 #include "../controller/Rename.h"
 #include "../controller/ERROR_CODES.h"
+#include "FactoryCommand.h"
+
+bool Rename::reg = FactoryCommand::registerCommand("rename", SharePointer<Command>(new Rename));
 
 void Rename::action(std::list<std::string> args, DnaData & data)
 {

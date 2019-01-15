@@ -13,15 +13,15 @@
 class FactoryCommand
 {
 public:
-    FactoryCommand();
-    Command * getCommand(std::string);
-    bool registerCommand(std::string, SharePointer<Command>);
 
-    static SharePointer<FactoryCommand> getInstance();
-    static SharePointer<FactoryCommand> m_instance;
+    FactoryCommand();
+
+    Command * getCommand(std::string);
+
+    static bool registerCommand(std::string, SharePointer<Command>);
 
 private:
-    std::map<std::string, SharePointer<Command> > commandMap;
+    static std::map<std::string, SharePointer<Command> > & getMap();
 };
 
 

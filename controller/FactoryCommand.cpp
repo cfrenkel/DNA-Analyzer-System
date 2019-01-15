@@ -17,46 +17,26 @@
 #include "../controller/Replace.h"
 #include "../controller/ERROR_CODES.h"
 
-FactoryCommand::FactoryCommand() {
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("new", SharePointer<Command>(new New)));
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("load", SharePointer<Command>(new Load)));
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("save", SharePointer<Command>(new Save)));
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("show", SharePointer<Command>(new Show)));
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("exit", SharePointer<Command>(new Exit)));
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("dup", SharePointer<Command>(new Dup)));
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("rename", SharePointer<Command>(new Rename)));
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("del", SharePointer<Command>(new Del)));
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("list", SharePointer<Command>(new List)));
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("slice", SharePointer<Command>(new Slice)));
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("pair", SharePointer<Command>(new Pair)));
-    commandMap.insert(std::pair<std::string,SharePointer<Command> >("replace", SharePointer<Command>(new Replace)));
+FactoryCommand::FactoryCommand() {}
 
+std::map<std::string, SharePointer<Command> > & FactoryCommand::getMap()
+{
+    static std::map<std::string,SharePointer<Command> > commandMap;
+    return commandMap;
 }
 
 Command * FactoryCommand::getCommand(std::string command)
 {
-    if (commandMap.find(command) == commandMap.end())
+    if (FactoryCommand::getMap().find(command) == FactoryCommand::getMap().end())
     {
         throw NOT_FOUND_COAMMAND;
     }
-    return commandMap[command].get();
+    return FactoryCommand::getMap()[command].get();
 }
 
-//bool FactoryCommand::registerCommand(std::string command, SharePointer<Command> sp)
-//{
-//    commandMap.insert(std::pair<std::string,SharePointer<Command> >(command, sp));
-//    return true;
-//}
+bool FactoryCommand::registerCommand(std::string command, SharePointer<Command> sp)
+{
+    FactoryCommand::getMap().insert(std::pair<std::string,SharePointer<Command> >(command, sp));
+    return true;
+}
 
-
-//SharePointer<FactoryCommand> FactoryCommand:: = SharePointer<FactoryCommand>();
-
-//SharePointer<FactoryCommand> FactoryCommand::getInstance()
-//{
-//    if (!m_instance)
-//    {
-//        m_instance = SharePointer<FactoryCommand>(new FactoryCommand());
-//    }
-//
-//    return m_instance;
-//}

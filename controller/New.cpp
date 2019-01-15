@@ -6,7 +6,7 @@
 #include "../controller/ERROR_CODES.h"
 #include "FactoryCommand.h"
 
-//bool New::reg = FactoryCommand::getInstance()->registerCommand("new", SharePointer<Command>(new New));
+bool New::reg = FactoryCommand::registerCommand("new", SharePointer<Command>(new New));
 
 void New::action(std::list<std::string> arguments, DnaData & data)
 {

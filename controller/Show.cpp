@@ -6,6 +6,9 @@
 #include "FactoryCommand.h"
 #include "../controller/ERROR_CODES.h"
 #include "../controller/Convert.h"
+#include "FactoryCommand.h"
+
+bool Show::reg = FactoryCommand::registerCommand("show", SharePointer<Command>(new Show));
 
 
 void Show::action(std::list<std::string> args, DnaData & data)

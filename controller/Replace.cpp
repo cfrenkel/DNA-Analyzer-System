@@ -7,6 +7,9 @@
 #include "../controller/Convert.h"
 
 // > cmd >>> replace <seq> <index> <new_letter> [: [@<new_seq_name>|@@]]
+#include "FactoryCommand.h"
+
+bool Replace::reg = FactoryCommand::registerCommand("replace", SharePointer<Command>(new Replace));
 
 char convertToChar(std::string c)
 {

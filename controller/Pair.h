@@ -9,10 +9,9 @@
 
 class Pair :public Command
 {
+    static bool reg;
 public:
     void action(std::list<std::string>, DnaData &);
-    SharePointer<DnaMetaData> decodeDna(std::string ,std::string , DnaData & );
-
 };
 
 

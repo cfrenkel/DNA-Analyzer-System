@@ -6,6 +6,11 @@
 #include "../controller/ERROR_CODES.h"
 
 #include <cstdlib>
+
+#include "FactoryCommand.h"
+
+bool Exit::reg = FactoryCommand::registerCommand("exit", SharePointer<Command>(new Exit));
+
 void Exit::action(std::list<std::string> args, DnaData & data)
 {
     if (args.size() > 0)

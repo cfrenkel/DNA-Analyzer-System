@@ -4,15 +4,9 @@
 
 #include "../controller/Dup.h"
 #include "../controller/ERROR_CODES.h"
+#include "FactoryCommand.h"
 
-std::string getName(int number, DnaData & data)
-{
-    static int id = 1;
-    std::string name = data.getNameById(number);
-    std::stringstream ss;
-    ss << name << "_" << id++;
-    return ss.str();
-}
+bool Dup::reg = FactoryCommand::registerCommand("dup", SharePointer<Command>(new Dup));
 
 void Dup::action(std::list<std::string> args, DnaData & data)
 {

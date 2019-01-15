@@ -7,6 +7,10 @@
 #include "../controller/ERROR_CODES.h"
 #include "../controller/ExceptionManager.h"
 
+#include "FactoryCommand.h"
+
+bool Pair::reg = FactoryCommand::registerCommand("pair", SharePointer<Command>(new Pair));
+
 std::string calcException(ERROR_CODE e)
 {
     return ExceptionManager(e).getMsg();
