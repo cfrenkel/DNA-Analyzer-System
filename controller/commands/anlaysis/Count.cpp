@@ -3,7 +3,7 @@
 //
 
 #include <algorithm>
-#include "Find.h"
+#include "Count.h"
 
 
 
@@ -11,9 +11,24 @@
 #include "../../factory/FactoryCommand.h"
 #include "../../errorManagment/ERROR_CODES.h"
 
-bool Find::reg = FactoryCommand::registerCommand("find", SharePointer<Command>(new Find));
+bool Count::reg = FactoryCommand::registerCommand("count", SharePointer<Command>(new Count));
 
-void Find::action(std::list<std::string> args, DnaData & data)
+int countSubString(std::string main, std::string sub)
+{
+    int occurrences = 0;
+    std::string::size_type pos = 0;
+
+    while ((pos = main.find(sub, pos )) != std::string::npos) {
+        ++ occurrences;
+        pos += sub.length();
+//        pos += 1;
+
+    }
+
+    return occurrences;
+}
+
+void Count::action(std::list<std::string> args, DnaData & data)
 {
     if (args.size() < 1 || args.size() > 2)
         throw INVALID_COMMAND;
@@ -29,7 +44,9 @@ void Find::action(std::list<std::string> args, DnaData & data)
 
     std::transform(sub_seq.begin(), sub_seq.end(),sub_seq.begin(), ::toupper);
 
+    int count = countSubString(main_seq, sub_seq);
+
     std::stringstream ss;
-    ss << main_seq.find(sub_seq) << "\n";
+    ss << count << "\n";
     m_message = ss.str();
 }

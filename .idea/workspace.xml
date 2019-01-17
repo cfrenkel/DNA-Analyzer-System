@@ -12,9 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db96c7d8-4d5e-43e8-87f8-f950cd81c2cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/commands/anlaysis/Find.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/commands/anlaysis/Find.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/commands/anlaysis/Count.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/commands/anlaysis/Count.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/commands/anlaysis/Find.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/controller/commands/anlaysis/Find.cpp" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Desktop/DNA/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -76,10 +77,10 @@
           <entry key="c" value="1" />
           <entry key="cbp" value="1" />
           <entry key="cmake" value="3" />
-          <entry key="cpp" value="353" />
+          <entry key="cpp" value="354" />
           <entry key="excellenteam_ella_c_dna_cfrenkel (disassembly)" value="14" />
           <entry key="gitignore" value="3" />
-          <entry key="h" value="258" />
+          <entry key="h" value="259" />
           <entry key="makefile" value="2" />
           <entry key="md" value="1" />
           <entry key="out" value="3" />
@@ -92,21 +93,21 @@
         <counts>
           <entry key="CMakeLists.txt" value="5" />
           <entry key="Disassembly" value="14" />
-          <entry key="ObjectiveC" value="613" />
+          <entry key="ObjectiveC" value="615" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="9680" />
+          <entry key="cpp" value="9936" />
           <entry key="gitignore" value="15" />
-          <entry key="h" value="2028" />
+          <entry key="h" value="2033" />
           <entry key="mm" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="11715" />
+          <entry key="ObjectiveC" value="11976" />
           <entry key="PLAIN_TEXT" value="15" />
         </counts>
       </usages-collector>
@@ -114,14 +115,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Find.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="88">
+              <caret line="4" selection-start-line="4" selection-end-line="34" selection-end-column="1" />
               <folding>
-                <element signature="e#42#59#0" expanded="true" />
+                <element signature="e#42#62#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Count.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-401">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+              <folding>
+                <element signature="e#42#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Count.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -129,7 +151,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Len.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="44">
               <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="2" />
             </state>
           </provider>
@@ -170,8 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controller/commands/creation/Dup.h" />
-        <option value="$PROJECT_DIR$/controller/commands/creation/New.cpp" />
         <option value="$PROJECT_DIR$/controller/commands/creation/New.h" />
         <option value="$PROJECT_DIR$/controller/commands/managment/Del.cpp" />
         <option value="$PROJECT_DIR$/controller/commands/managment/Del.h" />
@@ -221,6 +241,8 @@
         <option value="$PROJECT_DIR$/controller/commands/anlaysis/Len.cpp" />
         <option value="$PROJECT_DIR$/controller/commands/anlaysis/Find.h" />
         <option value="$PROJECT_DIR$/controller/commands/anlaysis/Find.cpp" />
+        <option value="$PROJECT_DIR$/controller/commands/anlaysis/Count.h" />
+        <option value="$PROJECT_DIR$/controller/commands/anlaysis/Count.cpp" />
       </list>
     </option>
   </component>
@@ -262,30 +284,9 @@
             <path>
               <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
               <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="decorators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="dnaData" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="sequences" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="anlaysis" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -367,12 +368,12 @@
       <workItem from="1547572670082" duration="15574000" />
       <workItem from="1547687310446" duration="4541000" />
       <workItem from="1547692353897" duration="3959000" />
-      <workItem from="1547696336745" duration="8322000" />
+      <workItem from="1547696336745" duration="9727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137354000" />
+    <option name="totallyTimeSpent" value="138759000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,9 +386,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="647" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24501197" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12769353" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -399,7 +399,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.09090909" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3655706" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.6866538" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.4738878" />
@@ -452,18 +452,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/model/dnaData/DnaMetaData.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/readWriteDna/DNAReader.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-229" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/readWriteDna/DNAWriter.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -820,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Len.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Find.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -851,12 +832,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Len.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Count.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Find.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="34" selection-end-column="1" />
           <folding>
-            <element signature="e#42#59#0" expanded="true" />
+            <element signature="e#42#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Count.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-401">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="e#42#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
