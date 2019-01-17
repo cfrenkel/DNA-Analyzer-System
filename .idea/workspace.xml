@@ -12,10 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db96c7d8-4d5e-43e8-87f8-f950cd81c2cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/commands/manipulation/Concat.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/commands/manipulation/Concat.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/decorators/ConcatDecorator.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/decorators/ConcatDecorator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/commands/anlaysis/Find.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/commands/anlaysis/Find.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Desktop/DNA/cmake-build-debug/" />
@@ -78,11 +76,11 @@
           <entry key="c" value="1" />
           <entry key="cbp" value="1" />
           <entry key="cmake" value="3" />
-          <entry key="cpp" value="338" />
+          <entry key="cpp" value="353" />
           <entry key="excellenteam_ella_c_dna_cfrenkel (disassembly)" value="14" />
           <entry key="gitignore" value="3" />
-          <entry key="h" value="249" />
-          <entry key="makefile" value="1" />
+          <entry key="h" value="258" />
+          <entry key="makefile" value="2" />
           <entry key="md" value="1" />
           <entry key="out" value="3" />
           <entry key="rawdna" value="5" />
@@ -94,21 +92,21 @@
         <counts>
           <entry key="CMakeLists.txt" value="5" />
           <entry key="Disassembly" value="14" />
-          <entry key="ObjectiveC" value="589" />
-          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="ObjectiveC" value="613" />
+          <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="9313" />
+          <entry key="cpp" value="9680" />
           <entry key="gitignore" value="15" />
-          <entry key="h" value="2002" />
+          <entry key="h" value="2028" />
           <entry key="mm" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="11322" />
+          <entry key="ObjectiveC" value="11715" />
           <entry key="PLAIN_TEXT" value="15" />
         </counts>
       </usages-collector>
@@ -117,49 +115,43 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controller/commands/manipulation/Concat.cpp">
+        <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Find.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+            <state relative-caret-position="280">
+              <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
               <folding>
-                <element signature="e#42#87#0" expanded="true" />
-                <element signature="e#167#219#0" expanded="true" />
+                <element signature="e#42#59#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/decorators/ConcatDecorator.h">
+        <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Len.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#162#193#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="110">
+              <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/decorators/ConcatDecorator.cpp">
+        <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Find.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#72#130#0" />
-                <element signature="e#74#238#0" />
-                <element signature="e#240#702#0" />
-              </folding>
+            <state relative-caret-position="132">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/decorators/PairDecorator.cpp">
+        <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Len.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="8" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="88">
+              <caret line="4" selection-start-line="4" selection-end-line="22" selection-end-column="1" />
+              <folding>
+                <element signature="e#41#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -178,11 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controller/admin/Convert.cpp" />
-        <option value="$PROJECT_DIR$/controller/commands/control/List.h" />
-        <option value="$PROJECT_DIR$/controller/commands/control/Show.cpp" />
-        <option value="$PROJECT_DIR$/controller/commands/control/Show.h" />
-        <option value="$PROJECT_DIR$/controller/commands/creation/Dup.cpp" />
         <option value="$PROJECT_DIR$/controller/commands/creation/Dup.h" />
         <option value="$PROJECT_DIR$/controller/commands/creation/New.cpp" />
         <option value="$PROJECT_DIR$/controller/commands/creation/New.h" />
@@ -200,7 +187,6 @@
         <option value="$PROJECT_DIR$/model/decorators/ReplaceDecorator.h" />
         <option value="$PROJECT_DIR$/model/decorators/SliceDecorator.h" />
         <option value="$PROJECT_DIR$/model/dnaData/DnaData.h" />
-        <option value="$PROJECT_DIR$/model/dnaData/DnaMetaData.cpp" />
         <option value="$PROJECT_DIR$/model/dnaData/DnaMetaData.h" />
         <option value="$PROJECT_DIR$/model/readWriteDna/DNAReader.cpp" />
         <option value="$PROJECT_DIR$/model/readWriteDna/DNAWriter.cpp" />
@@ -225,10 +211,16 @@
         <option value="$PROJECT_DIR$/controller/commands/creation/Load.cpp" />
         <option value="$PROJECT_DIR$/controller/commands/control/List.cpp" />
         <option value="$PROJECT_DIR$/controller/commands/manipulation/Concat.h" />
-        <option value="$PROJECT_DIR$/model/decorators/ConcatDecorator.cpp" />
+        <option value="$PROJECT_DIR$/makefile" />
+        <option value="$PROJECT_DIR$/controller/commands/manipulation/Pair.cpp" />
         <option value="$PROJECT_DIR$/model/decorators/ConcatDecorator.h" />
         <option value="$PROJECT_DIR$/controller/commands/manipulation/Concat.cpp" />
-        <option value="$PROJECT_DIR$/makefile" />
+        <option value="$PROJECT_DIR$/model/decorators/ConcatDecorator.cpp" />
+        <option value="$PROJECT_DIR$/model/dnaData/DnaMetaData.cpp" />
+        <option value="$PROJECT_DIR$/controller/commands/anlaysis/Len.h" />
+        <option value="$PROJECT_DIR$/controller/commands/anlaysis/Len.cpp" />
+        <option value="$PROJECT_DIR$/controller/commands/anlaysis/Find.h" />
+        <option value="$PROJECT_DIR$/controller/commands/anlaysis/Find.cpp" />
       </list>
     </option>
   </component>
@@ -270,13 +262,6 @@
             <path>
               <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
               <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-              <item name="manipulation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -284,6 +269,23 @@
               <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="decorators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="dnaData" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="sequences" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="excellenteam_ella_c_dna_cfrenkel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="excellenteam-ella-c-dna-cfrenkel" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -365,12 +367,12 @@
       <workItem from="1547572670082" duration="15574000" />
       <workItem from="1547687310446" duration="4541000" />
       <workItem from="1547692353897" duration="3959000" />
-      <workItem from="1547696336745" duration="3199000" />
+      <workItem from="1547696336745" duration="8322000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132231000" />
+    <option name="totallyTimeSpent" value="137354000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -383,20 +385,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="647" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23623304" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24501197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33075434" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.516441" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.64603484" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5473888" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.63829786" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.09090909" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.6866538" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.4738878" />
@@ -449,62 +452,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controller/commands/managment/Save.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/commands/managment/Save.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/commands/manipulation/Replace.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/commands/Command.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/commands/manipulation/Slice.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/decorators/SliceDecorator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/dnaData/DnaData.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/dnaData/DnaMetaData.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/dnaData/DnaMetaData.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -548,13 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/sequences/Necleotide.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -654,22 +598,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/dnaData/DnaData.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/commands/Command.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/commands/control/List.h">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/Controller.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -680,20 +614,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SharePointer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/commands/control/List.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/commands/creation/Load.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -709,13 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/Controller.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/commands/manipulation/Pair.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
@@ -727,26 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/commands/manipulation/Pair.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="25" column="7" selection-end-line="52" />
-          <folding>
-            <element signature="e#41#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/decorators/PairDecorator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" selection-start-line="7" selection-end-line="18" selection-end-column="2" />
-          <folding>
-            <element signature="e#156#187#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,49 +663,200 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/decorators/ConcatDecorator.h">
+    <entry file="file://$PROJECT_DIR$/makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="396">
+          <caret line="18" column="5" selection-start-line="18" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/manipulation/Pair.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
-            <element signature="e#162#193#0" expanded="true" />
+            <element signature="e#41#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/decorators/ConcatDecorator.cpp">
+    <entry file="file://$PROJECT_DIR$/model/decorators/PairDecorator.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="234">
+          <caret line="14" column="21" selection-start-line="14" selection-end-line="15" />
           <folding>
-            <element signature="e#72#130#0" />
-            <element signature="e#74#238#0" />
-            <element signature="e#240#702#0" />
+            <element signature="e#156#187#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/decorators/PairDecorator.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="8" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="154">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/makefile">
+    <entry file="file:///usr/include/c++/7/bits/stl_vector.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-143">
-          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+        <state relative-caret-position="73">
+          <caret line="940" selection-start-line="940" selection-end-line="940" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/decorators/ConcatDecorator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#162#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SharePointer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/creation/New.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/dnaData/DnaMetaData.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#43#61#0" expanded="true" />
+            <element signature="e#88#215#0" />
+            <element signature="e#217#347#0" />
+            <element signature="e#349#464#0" />
+            <element signature="e#466#533#0" />
+            <element signature="e#535#663#0" />
+            <element signature="e#665#715#0" />
+            <element signature="e#717#762#0" />
+            <element signature="e#764#821#0" />
+            <element signature="e#823#889#0" />
+            <element signature="e#891#1134#0" />
+            <element signature="e#1136#1533#0" />
+            <element signature="e#1535#1603#0" />
+            <element signature="e#1605#1878#0" />
+            <element signature="e#1880#2110#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/decorators/ConcatDecorator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#72#111#0" />
+            <element signature="e#113#202#0" />
+            <element signature="e#204#368#0" />
+            <element signature="e#370#832#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/dnaData/DnaData.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1382">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="e#43#63#0" expanded="true" />
+            <element signature="e#4067#4520#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/commands/manipulation/Concat.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        <state relative-caret-position="116">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
           <folding>
-            <element signature="e#42#87#0" expanded="true" />
             <element signature="e#167#219#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/Controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#43#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/control/Show.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/control/List.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" selection-start-line="7" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/control/List.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="11" lean-forward="true" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#41#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Len.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Find.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Len.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <element signature="e#41#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/sequences/Necleotide.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2134">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/commands/anlaysis/Find.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+          <folding>
+            <element signature="e#42#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
