@@ -13,7 +13,7 @@
 
 bool Pair::reg = FactoryCommand::registerCommand("pair", SharePointer<Command>(new Pair));
 
-std::string calcException(ERROR_CODE e)
+std::string calcExceptionPair(ERROR_CODE e)
 {
     return ExceptionManager(e).getMsg();
 }
@@ -23,7 +23,7 @@ void Pair::action(std::list<std::string> args, DnaData & data)
     std::string name;
     if (args.size() > 3)
     {
-        m_message = calcException(INVALID_COMMAND);
+        m_message = calcExceptionPair(INVALID_COMMAND);
         return;
     }
     std::string s = args.front(); //pair from
