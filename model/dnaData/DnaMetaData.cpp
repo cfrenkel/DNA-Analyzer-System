@@ -68,8 +68,10 @@ std::string DnaMetaData::getSeqStringDnaWithPar(int size)
 std::string DnaMetaData::getSeqStringDna()
 {
     std::stringstream ss;
+
     if (m_dnaPtr->getLength() < 40)
         return getSeqStringDnaWithPar();
+
     size_t length = m_dnaPtr->getLength();
     for( size_t i = 0; i < 32; ++i)
     {

@@ -22,3 +22,12 @@ void Del::action(std::list<std::string> args, DnaData & data)
     ss << "[" << d.getId() << "] " << d.getName() << ": " << data.getByNumber(d.getId()) << " \n";
     m_message = ss.str();*/
 }
+
+
+std::string Del::help()
+{
+    std::stringstream ss;
+    ss << "Del: ** **\n\n";
+
+    return ss.str();
+}

@@ -20,7 +20,6 @@ public:
 
     static bool registerCommand(std::string, SharePointer<Command>);
 
-private:
     static std::map<std::string, SharePointer<Command> > & getMap();
 };
 

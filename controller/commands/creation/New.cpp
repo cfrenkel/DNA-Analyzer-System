@@ -25,3 +25,11 @@ void New::action(std::list<std::string> arguments, DnaData & data)
     ss << "[" << data.getIdByName(name) << "] " << name <<": " << data.getByName(name).getSeqStringDna() << "\n";
     m_message = ss.str();
 }
+
+std::string New::help()
+{
+    std::stringstream ss;
+    ss << "New: ** **\n\n";
+
+    return ss.str();
+}

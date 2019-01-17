@@ -22,6 +22,7 @@ void printParser(std::list<std::string> par)
 
 void Controller::run()
 {
+    commandInterface.output("Welcome To DNA Analyzer System :)\n");
     while (true)
     {
         std::string command = commandInterface.input();

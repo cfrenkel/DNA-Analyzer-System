@@ -33,3 +33,13 @@ void Find::action(std::list<std::string> args, DnaData & data)
     ss << main_seq.find(sub_seq) << "\n";
     m_message = ss.str();
 }
+
+std::string Find::help()
+{
+    std::stringstream ss;
+    ss << "find: **find <seq_to_find_in> <seq_to_be_found>**\n";
+    ss << "returns the (0-based) index of the first appearance of \n";
+    ss << "<expressed_sub_seq> in the sequence <seq>. \n\n";
+
+    return ss.str();
+}

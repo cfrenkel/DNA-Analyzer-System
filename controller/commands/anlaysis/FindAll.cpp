@@ -53,3 +53,13 @@ void FindAll::action(std::list<std::string> args, DnaData & data)
 
     m_message = FindAllSubString(main_seq, sub_seq);
 }
+
+std::string FindAll::help()
+{
+    std::stringstream ss;
+    ss << "find: **find all <seq_to_find_in> <seq_to_be_found>**\n";
+    ss << "returns the (0-based) indexs of the appearances of \n";
+    ss << "<expressed_sub_seq> in the sequence <seq>. \n\n";
+
+    return ss.str();
+}

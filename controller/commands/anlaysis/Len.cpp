@@ -21,3 +21,13 @@ void Len::action(std::list<std::string> args, DnaData & data)
     ss << len << "\n";
     m_message = ss.str();
 }
+
+
+std::string Len::help()
+{
+    std::stringstream ss;
+    ss << "Len: **len <seq_id>**\n";
+    ss << "returns the length of the DNA sequence by this ID\n\n";
+
+    return ss.str();
+}

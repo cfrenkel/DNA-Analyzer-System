@@ -50,3 +50,14 @@ void Count::action(std::list<std::string> args, DnaData & data)
     ss << count << "\n";
     m_message = ss.str();
 }
+
+
+std::string Count::help()
+{
+    std::stringstream ss;
+    ss << "Count: **count <seq_to_find_in> <seq_to_be_found>**\n";
+    ss << "count the times that the first appearance of \n";
+    ss << "<expressed_sub_seq> in the sequence <seq>. \n\n";
+
+    return ss.str();
+}

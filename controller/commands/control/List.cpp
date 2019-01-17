@@ -15,3 +15,14 @@ void List::action(std::list<std::string> args, DnaData & data)
         throw INVALID_COMMAND;
     m_message = data.getAllSeq();
 }
+
+std::string List::help()
+{
+    std::stringstream ss;
+    ss << "list: **list**\n";
+    ss << "shows all the sequences in the system, by order\n";
+    ss << "For each sequence, it shows its number, its name \n";
+    ss << "and the sequence itself \n\n";
+
+    return ss.str();
+}

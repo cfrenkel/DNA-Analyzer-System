@@ -21,3 +21,11 @@ void Save::action(std::list<std::string> args, DnaData & data)
     writer.Write(metaData.getSharePointerDna());
 
 }
+
+std::string Save::help()
+{
+    std::stringstream ss;
+    ss << "Save: ** **\n\n";
+
+    return ss.str();
+}

@@ -24,3 +24,10 @@ void Dup::action(std::list<std::string> args, DnaData & data)
 }
 
 
+std::string Dup::help()
+{
+    std::stringstream ss;
+    ss << "Dup: ** **\n\n";
+
+    return ss.str();
+}

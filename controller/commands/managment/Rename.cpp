@@ -23,3 +23,11 @@ void Rename::action(std::list<std::string> args, DnaData & data)
     ss << "[" << metaData.getId() << "] " << newName <<": " << metaData.getSeqStringDna() << "\n";
     m_message = ss.str();
 }
+
+std::string Rename::help()
+{
+    std::stringstream ss;
+    ss << "Rename: ** **\n\n";
+
+    return ss.str();
+}

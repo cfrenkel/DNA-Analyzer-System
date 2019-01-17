@@ -27,3 +27,13 @@ void Show::action(std::list<std::string> args, DnaData & data)
 }
 
 
+std::string Show::help()
+{
+    std::stringstream ss;
+    ss << "show: **show `<seq>` [<num_chars>]**\n";
+    ss << "Shows the sequence: Its ID, its name, its status\n";
+    ss << "and <num_chars> (or default if not exist <num_chars>) characters\n";
+    ss << "of the sequence itself\n\n";
+
+    return ss.str();
+}

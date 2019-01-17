@@ -50,3 +50,11 @@ void Pair::action(std::list<std::string> args, DnaData & data)
     m_message = ss.str();
 
 }
+
+std::string Pair::help()
+{
+    std::stringstream ss;
+    ss << "Pair: ** **\n\n";
+
+    return ss.str();
+}

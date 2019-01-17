@@ -61,3 +61,11 @@ void Concat::action(std::list<std::string> args, DnaData & data)
     m_message = ss.str();
 
 }
+
+std::string Concat::help()
+{
+    std::stringstream ss;
+    ss << "Concat: ** **\n\n";
+
+    return ss.str();
+}

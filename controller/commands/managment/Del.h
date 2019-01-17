@@ -11,6 +11,8 @@
 class Del : public Command
 {
     void action(std::list<std::string>, DnaData &);
+    std::string help();
+
 };
 
 

@@ -68,3 +68,11 @@ void Replace::action(std::list<std::string> args, DnaData & data)
     ss << "[" << data.getIdByName(name) << "] " << name <<": " << data.getByNumber(data.getIdByName(name)).getSeqStringDna() << "\n";
     m_message = ss.str();
 }
+
+std::string Replace::help()
+{
+    std::stringstream ss;
+    ss << "Replace: ** **\n\n";
+
+    return ss.str();
+}

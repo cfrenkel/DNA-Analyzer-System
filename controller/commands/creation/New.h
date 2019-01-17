@@ -10,6 +10,8 @@
 class New : public Command
 {
     static bool reg;
+    std::string help();
+
 public:
     void action(std::list<std::string>, DnaData &);
 //    void help();

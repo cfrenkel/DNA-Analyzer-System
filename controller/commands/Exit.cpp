@@ -15,5 +15,11 @@ void Exit::action(std::list<std::string> args, DnaData & data)
 {
     if (args.size() > 0)
         throw INVALID_COMMAND;
+    m_message = "Good Bye :)\n";
     exit(0);
+}
+
+std::string Exit::help()
+{
+    return "Exit: **exit** \nexit from the system\n\n";
 }

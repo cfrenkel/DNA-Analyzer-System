@@ -25,3 +25,11 @@ void Load::action(std::list<std::string> args, DnaData &data)
     //    data.printNameMap();
     //    data.printIdMap();
 }
+
+std::string Load::help()
+{
+    std::stringstream ss;
+    ss << "Load: ** **\n\n";
+
+    return ss.str();
+}

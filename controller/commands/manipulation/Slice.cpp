@@ -44,3 +44,11 @@ void Slice::action(std::list<std::string> args, DnaData & data)
     m_message = ss.str();
 
 }
+
+std::string Slice::help()
+{
+    std::stringstream ss;
+    ss << "Slice: ** **\n\n";
+
+    return ss.str();
+}
