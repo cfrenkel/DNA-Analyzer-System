@@ -5,7 +5,7 @@
 #ifndef DNA_IDNA_H
 #define DNA_IDNA_H
 
-#include "../model/Necleotide.h"
+#include "sequences/Necleotide.h"
 class IDNA
 {
 public:

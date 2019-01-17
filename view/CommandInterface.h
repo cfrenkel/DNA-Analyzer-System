@@ -5,7 +5,7 @@
 #ifndef DNA_COMMANDINTERFACE_H
 #define DNA_COMMANDINTERFACE_H
 
-#include "../view/UserInterface.h"
+#include "UserInterface.h"
 #include <iostream>
 
 class CommandInterface /*: public UserInterface*/

@@ -2,7 +2,7 @@
 // Created by cfrenkel on 12/27/18.
 //
 
-#include "../view/CommandInterface.h"
+#include "CommandInterface.h"
 #include "iostream"
 
 std::string CommandInterface::input()

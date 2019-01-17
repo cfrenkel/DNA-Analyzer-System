@@ -8,8 +8,8 @@
 #include <string>
 #include <list>
 #include "../view/Parser.h"
-#include "../model/DnaData.h"
-#include "../controller/FactoryCommand.h"
+#include "../model/dnaData/DnaData.h"
+#include "../controller/factory/FactoryCommand.h"
 #include "../view/CommandInterface.h"
 
 class Controller

@@ -3,7 +3,7 @@
 //
 
 #include <sstream>
-#include "../view/Parser.h"
+#include "Parser.h"
 
 std::list<std::string> Parser::parse(std::string c)
 {

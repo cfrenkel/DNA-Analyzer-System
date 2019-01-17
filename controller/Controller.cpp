@@ -2,11 +2,10 @@
 // Created by cfrenkel on 12/27/18.
 //
 
-#include "../controller/Controller.h"
-#include "../controller/Command.h"
-#include "../controller/New.h"
-#include "../controller/ExceptionManager.h"
-#include "../controller/ERROR_CODES.h"
+#include "Controller.h"
+#include "commands/Command.h"
+#include "errorManagment/ExceptionManager.h"
+#include "errorManagment/ERROR_CODES.h"
 #include <iterator>
 
 void printParser(std::list<std::string> par)
